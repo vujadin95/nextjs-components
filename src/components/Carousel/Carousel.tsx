@@ -44,6 +44,7 @@ export default function Carousel({
       >
         {slides.map((src) => (
           <Image
+            key={src.toString()}
             src={src}
             alt={"some"}
             className="w-full object-cover shrink-0"
@@ -69,6 +70,7 @@ export default function Carousel({
         <div className="flex items-center justify-center gap-2">
           {slides.map((_, index) => (
             <div
+              key={index}
               onClick={() => goToSlide(index)}
               className={`
               transition-all w-4 h-2 bg-black border border-white rounded-full cursor-pointer

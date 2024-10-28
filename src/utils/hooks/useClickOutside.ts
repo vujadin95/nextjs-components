@@ -1,9 +1,14 @@
 import { useEventListener } from "./useEventListener";
+import { RefObject } from "react";
 
-const useClickOutside = (modalRef: any, callback: () => void) => {
+const useClickOutside = (
+  modalRef: RefObject<HTMLElement>,
+  callback: () => void
+) => {
   useEventListener("click", (e) => {
-    if (!modalRef == null || !modalRef.current.contains(e.target))
+    if (!modalRef?.current || !modalRef.current.contains(e.target as Node)) {
       return callback();
+    }
   });
 };
 
