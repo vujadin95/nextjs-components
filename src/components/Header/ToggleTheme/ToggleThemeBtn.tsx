@@ -1,34 +1,44 @@
-'use client'
-import { useClickOutside } from "@/utils/hooks/useClickOutside"
-import { Eclipse, Moon, MoonStar, Sun } from "lucide-react"
-import { useRef, useState } from "react"
+"use client";
 
-const ToggleThemeBtn = () => {
- const [isOpen, setIsOpen] = useState(false)
- const divReff = useRef<HTMLDivElement>(null);
+import { MoonStar, Sun } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 
- useClickOutside(divReff, () => {
-  if (isOpen) setIsOpen(false);
- });
+export default function ThemeSwitch() {
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
 
- return (
-  <div className="relative inline-block ml-auto lg:ml-0" ref={divReff}>
-   <button className="rounded-full px-3 py-2 " onClick={() => setIsOpen(!isOpen)}>
-    <MoonStar />
-   </button>
-   {isOpen &&
-    <div className="absolute p-2 right-0 z-10 w-32 border border-gray-400 rounded-md shadow-xl space-y-2">
-     <button className="flex items-center gap-2 p-1">
-      <MoonStar />
-      Dark
-     </button>
-     <button className="flex items-center gap-2 p-1">
-      <Sun />
-      Dark
-     </button>
-    </div>
-   }
-  </div>
- )
+  useEffect(() => setMounted(true), []);
+  if (!mounted)
+    return (
+      <Image
+        width={36}
+        height={36}
+        sizes="36x36"
+        alt="Loading Light/Dark Toggle"
+        priority={false}
+        title="Loading Light/Dark Toggle"
+        src={
+          "data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
+        }
+      />
+    );
+
+  if (resolvedTheme === "dark") {
+    return (
+      <Sun
+        className="cursor-pointer p-[6px] w-9 h-9"
+        onClick={() => setTheme("light")}
+      />
+    );
+  }
+  if (resolvedTheme === "light") {
+    return (
+      <MoonStar
+        className="cursor-pointer p-[6px] w-9 h-9"
+        onClick={() => setTheme("dark")}
+      />
+    );
+  }
 }
-export default ToggleThemeBtn

@@ -1,12 +1,12 @@
 import Header from "@/components/Header/Header";
 import "./globals.css";
-import { Inter } from 'next/font/google';
+import { Inter } from "next/font/google";
+import { Providers } from "./providers";
 
 const inter = Inter({
-  subsets: ['latin'],
-  display: "swap"
-})
-
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -14,14 +14,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${inter.className}  antialiased relative`}
+        className={`${inter.className}  antialiased relative max-w-screen-2xl mx-auto`}
       >
-        <Header />
-        <main className="pt-[60px]">
-          {children}
-        </main>
+        <Providers>
+          <Header />
+          <main className="pt-[60px] ">{children}</main>
+        </Providers>
       </body>
     </html>
   );
