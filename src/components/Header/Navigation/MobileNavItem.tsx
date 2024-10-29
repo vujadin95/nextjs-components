@@ -14,7 +14,7 @@ const MobileNavItem = ({ menu }: MobileNavItemProps) => {
  return (
   <li key={menu.title} className="">
    <span
-    className="flex items-center justify-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative "
+    className="flex items-center justify-between p-4 hover:bg-secondary rounded-md cursor-pointer relative "
     onClick={() => setIsOpen(prev => !prev)}
    >
     {menu.title}
@@ -31,9 +31,10 @@ const MobileNavItem = ({ menu }: MobileNavItemProps) => {
      {menu.subMenu?.map((subm) => (
       <li
        key={subm.title}
-       className="p-2 flex items-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer "
+       className="p-2 flex items-center hover:bg-secondary rounded-md gap-x-2 cursor-pointer group/submenu"
       >
-       <subm.icon size={17} />
+       <subm.icon className="w-8 h-8 p-1 rounded-sm hover:bg-background group-hover/submenu:bg-textColor group-hover/submenu:text-background " />
+
        {subm.title}
       </li>
      ))}

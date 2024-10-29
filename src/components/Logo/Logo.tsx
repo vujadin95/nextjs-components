@@ -6,7 +6,7 @@ import logoLight from "./images/superheat-white.png";
 const Logo = () => {
   return (
     <Link
-      className="relative flex w-full max-w-[250px] items-center justify-center h-[60px]"
+      className="relative flex  w-full max-w-[180px] md:max-w-[250px] items-center justify-center h-[60px]"
       href={"/"}
     >
       <Image

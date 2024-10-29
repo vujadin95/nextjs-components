@@ -15,7 +15,7 @@ export default function MobileNavigation({ navigation }: NavigationTypes) {
    </button>
 
    {isOpen && (<div
-    className="fixed left-0 right-0 top-[60px] overflow-y-auto h-full bg-[#18181A] backdrop-blur text-white p-6 pb-20"
+    className="fixed left-0 right-0 top-[60px] overflow-y-auto h-full bg-background  text-textColor p-6 pb-20"
    >
     <ul>
      {navigation.map((menu) => {

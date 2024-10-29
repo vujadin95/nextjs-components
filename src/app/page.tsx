@@ -7,7 +7,15 @@ import img7 from "@/components/Carousel/images/7.jpg";
 import img8 from "@/components/Carousel/images/8.jpg";
 
 export default function Home() {
-  const slides = [img3, img4, img6, img7, img8];
+  const slides = [
+    { src: img3, id: 1 },
+    { src: img4, id: 2 },
+    { src: img6, id: 3 },
+    { src: img7, id: 4 },
+    { src: img8, id: 5 }
+  ];
+
+
   return (
     <div className="space-y-5">
       <div className="max-w-screen-2xl h-[800px]">

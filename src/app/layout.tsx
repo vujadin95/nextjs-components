@@ -14,13 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className}  antialiased relative max-w-screen-2xl mx-auto`}
+        className={`${inter.className}  antialiased relative bg-background`}
       >
         <Providers>
-          <Header />
-          <main className="pt-[60px] ">{children}</main>
+          <div className="w-full z-50 fixed top-0 h-[60px] border-b border-zinc-600 shadow-[0px_20px_20px_0px_#00000024] px-4">
+            <Header />
+          </div>
+          <main className="pt-[60px] max-w-screen-2xl mx-auto px-4">{children}</main>
         </Providers>
       </body>
     </html>
