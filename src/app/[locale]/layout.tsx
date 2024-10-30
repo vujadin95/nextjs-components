@@ -6,7 +6,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import HeaderComponent from "@/components/Header/HeaderComponent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,7 +14,7 @@ const inter = Inter({
 
 export default async function RootLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
@@ -32,9 +31,11 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <div className="w-full z-50 fixed top-0 h-[60px] border-b border-zinc-600 shadow-[0px_20px_20px_0px_#00000024] px-4">
-              <HeaderComponent />
+              <Header />
             </div>
-            <main className="pt-[60px] max-w-screen-2xl mx-auto px-4">{children}</main>
+            <main className="pt-[60px] max-w-screen-2xl mx-auto px-4">
+              {children}
+            </main>
           </Providers>
         </NextIntlClientProvider>
       </body>
