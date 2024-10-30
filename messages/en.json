@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "linkOne": {
+      "title": "Usluge & Proizvodi",
+      "href": "/services-and-products",
+      "subMenuItems": {
+        "subMenuOne": {
+          "title": "Projektovanje",
+          "href": "/services-and-products/#designing",
+          "description": "Kompletni licencirani projekti",
+          "icon": "DraftingCompassIcon"
+        },
+        "subMenuTwo": {
+          "title": "Sopstvena Proizvodnja",
+          "href": "/services-and-products/#production",
+          "description": "Proizvodja upotrebom kvalitetnih materijala i opreme",
+          "icon": "Cog"
+        },
+        "subMenuThree": {
+          "title": "Sistemi za uštedu",
+          "href": "/services-and-products/#savings",
+          "description": "Poboljšanje performansi i ušteda energije",
+          "icon": "Leaf"
+        },
+        "subMenuFour": {
+          "title": "Distribucija proizvoda",
+          "href": "/services-and-products/#distribution",
+          "description": "Kvalitetna distribucija proizvoda",
+          "icon": "Truck"
+        }
+      },
+      "gridCols": "2"
+    },
+    "linkTwo": {
+      "title": "Rešenja",
+      "href": "/solutions",
+      "subMenuItems": {
+        "subMenuOne": {
+          "title": "Hlađenje",
+          "href": "/solutions/#cooling",
+          "description": "Hlađenje",
+          "icon": "Snowflake"
+        },
+        "subMenuTwo": {
+          "title": "Klimatizacija",
+          "href": "/solutions/#climatization",
+          "description": "Klimatizacija",
+          "icon": "Fan"
+        },
+        "subMenuThree": {
+          "title": "Sistemi za uštedu",
+          "href": "/services-and-products/#savings",
+          "description": "Poboljšanje performansi i ušteda energije",
+          "icon": "Leaf"
+        }
+      },
+      "gridCols": "2"
+    },
+    "linkThree": {
+      "title": "Zašto Superheat",
+      "href": "/why-superheat"
+    },
+    "linkFour": {
+      "title": "O nama",
+      "href": "/about-us",
+      "subMenuItems": {
+        "subMenuOne": {
+          "title": "Naša priča",
+          "href": "/about-us/#our-story",
+          "description": "Ko smo mi i šta predstavljamo?",
+          "icon": "Building2"
+        }
+      }
+    },
+    "linkFive": {
+      "title": "Kontakt",
+      "href": "/contact"
+    }
+  },
+
+  "HomePage": {
+    "title": "Home Page"
+  }
+}

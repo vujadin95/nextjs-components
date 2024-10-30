@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import MobileNavItem from "./MobileNavItem";
 import { NavigationTypes } from "./navigation.types";
 
+
+
 export default function MobileNavigation({ navigation }: NavigationTypes) {
  const [isOpen, setIsOpen] = useState(false);
 
