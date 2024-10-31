@@ -1,8 +1,11 @@
 "use client";
+import EnFlag from "./united-kingdom.png";
+import SrFlag from "./world.png";
 
 import { useParams } from "next/navigation";
 import { ChangeEvent, ReactNode, useTransition } from "react";
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
+import Image from "next/image";
 
 type Props = {
   children: ReactNode;
@@ -32,7 +35,6 @@ export default function LocaleSwitcherSelect({
       );
     });
   }
-  console.log(defaultValue);
   return (
     <label
       className={
@@ -41,7 +43,13 @@ export default function LocaleSwitcherSelect({
           : "relative text-gray-400 transition-opacity [&:disabled]:opacity-30"
       }
     >
-      <p className="sr-only">{label}</p>
+      <p className="sr-only">
+        {label === "sr" ? (
+          <Image src={SrFlag} width={64} height={64} alt="Serbian flag" />
+        ) : (
+          <Image src={EnFlag} width={64} height={64} alt="English flag" />
+        )}
+      </p>
       <select
         className="inline-flex appearance-none bg-transparent py-3 pl-2 pr-6"
         defaultValue={defaultValue}

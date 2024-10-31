@@ -12,9 +12,8 @@ export default function Home() {
     { src: img4, id: 2 },
     { src: img6, id: 3 },
     { src: img7, id: 4 },
-    { src: img8, id: 5 }
+    { src: img8, id: 5 },
   ];
-
 
   return (
     <div className="space-y-5">

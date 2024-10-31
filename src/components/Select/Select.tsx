@@ -1,9 +1,9 @@
 "use client";
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { MouseEvent, useTransition } from "react";
-
 interface SelectProps {
   defaultValue: string;
   label?: string;

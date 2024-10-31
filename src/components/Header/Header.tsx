@@ -96,7 +96,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="w-full max-w-screen-2xl mx-auto flex items-center justify-between gap-2 bg-background ">
+    <header className="w-full max-w-screen-2xl mx-auto flex items-center justify-between gap-2 bg-background border-b border-gray-200 dark:border-gray-700/40">
       <Logo />
       <DesktopNavigation navigation={navigation} />
       <div className="flex items-center gap-2 ml-auto lg:ml-0">
