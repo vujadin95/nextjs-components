@@ -9,8 +9,6 @@ export default function Carousel({
   autoSlide = true,
   autoSlideInterval = 5000,
 }: CarouselProps) {
-
-
   const [curr, setCurr] = useState(0);
   const [isAutoSliding, setIsAutoSliding] = useState(autoSlide);
 
@@ -22,8 +20,7 @@ export default function Carousel({
   const next = () => {
     setIsAutoSliding(false);
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-
-
+    // rotateArray(slides);
   };
   const nextAutoSlide = () => {
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
@@ -40,6 +37,11 @@ export default function Carousel({
     setCurr(clickedImageIndex);
   };
 
+  // const rotateArray = (array) => {
+  //   const firtElement = array.shift();
+  //   return array.push(firtElement);
+  // };
+
   return (
     <div className="overflow-hidden relative h-full">
       <div
@@ -55,6 +57,7 @@ export default function Carousel({
           />
         ))}
       </div>
+      {/* control arrows */}
       <div className="absolute inset-0 flex items-center justify-between bg-gradient-to-r from-black/40 from-5% via-transparent to-black/40 to-95% px-4 group-showArrow">
         <button
           onClick={prev}
@@ -69,7 +72,7 @@ export default function Carousel({
           <ChevronRight size={40} />
         </button>
       </div>
-
+      {/* dots */}
       <div className="absolute bottom-4 right-0 left-0">
         <div className="flex items-center justify-center gap-2">
           {slides.map((slide, index) => (

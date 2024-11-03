@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { MenuItem } from "./navigation.types";
 
 const DesktopNavigationItem = ({ menu }: MenuItem) => {
@@ -10,7 +10,10 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
       className="group/link hover:h-[60px] flex items-center"
       key={menu.title}
     >
-      <span className="flex font-semibold items-center gap-1 cursor-pointer px-3 py-1 rounded-sm  transition-all group-hover/link:bg-textColor/20">
+      <Link
+        href={menu.href}
+        className="flex font-semibold items-center gap-1 cursor-pointer px-3 py-2 rounded-sm transition-all group-hover/link:bg-textColor/10"
+      >
         {menu.title}
         {hasSubMenu && (
           <ChevronDown
@@ -18,9 +21,9 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
             className="group-hover/link:rotate-180 duration-200"
           />
         )}
-      </span>
+      </Link>
       {hasSubMenu && (
-        <div className="absolute top-[60px] origin-[50%_-170px] p-4 rounded-md  bg-background hidden group-hover/link:grid border border-gray-700/20 dark:border-gray-700/20 shadow-2xl ">
+        <div className="hidden absolute top-full origin-top p-4 rounded-md bg-background group-hover/link:grid border border-border">
           <div
             className={`grid gap-4 ${
               menu.gridCols === 3
@@ -45,7 +48,7 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
                     </div>
                     <div>
                       <h6 className="font-semibold">{submenu.title}</h6>
-                      <p className="text-sm text-foreground max-w-[150px]">
+                      <p className="text-sm text-textColor max-w-[150px]">
                         {submenu.description}
                       </p>
                     </div>

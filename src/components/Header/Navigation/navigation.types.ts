@@ -8,6 +8,7 @@ export interface SubMenuItem {
 
 export interface MenuTypes {
   title: string;
+  href: string;
   subMenu?: SubMenuItem[];
   gridCols?: number;
 }
