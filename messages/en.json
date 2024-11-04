@@ -91,6 +91,18 @@
   },
 
   "HomePage": {
-    "title": "Home Page"
+    "title": "Home Page",
+    "writtableStrings": {
+      "stringOne": {
+        "value": "WE REDUCE THE ELECTRICAL ENERGY CONSUMPTION OF YOUR REFRIGERATOR UP TO 35%"
+      },
+      "stringTwo": {
+        "value": "WE PROVE TO YOU SAVINGS OF UP TO 35%"
+      },
+      "stringThree": {
+        "value": "WE OPTIMIZE WORK AND EXTEND THE WORKING LIFE OF YOUR REFRIGERATION EQUIPMENT"
+      },
+      "stringFour": { "value": "WE WILL MAKE YOUR BUSINESS MORE EFFICIENT" }
+    }
   }
 }

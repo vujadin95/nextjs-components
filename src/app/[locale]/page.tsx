@@ -16,10 +16,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="space-y-5">
-      <div className="max-w-screen-2xl h-[800px]">
+    <div>
+      <section className="relative h-[calc(100vh_-_60px)] w-full">
         <Carousel slides={slides} />
-      </div>
+      </section>
+      <section className="min-h-screen w-full bg-amber-300"></section>
     </div>
   );
 }

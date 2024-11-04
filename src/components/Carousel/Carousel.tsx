@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CarouselProps } from "./carousel.types";
+import { cn } from "@/utils/utils";
 
 export default function Carousel({
   slides,
@@ -20,7 +21,6 @@ export default function Carousel({
   const next = () => {
     setIsAutoSliding(false);
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-    // rotateArray(slides);
   };
   const nextAutoSlide = () => {
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
@@ -37,15 +37,10 @@ export default function Carousel({
     setCurr(clickedImageIndex);
   };
 
-  // const rotateArray = (array) => {
-  //   const firtElement = array.shift();
-  //   return array.push(firtElement);
-  // };
-
   return (
-    <div className="overflow-hidden relative h-full">
+    <div className="relative h-full overflow-hidden">
       <div
-        className="h-full w-full flex transition-transform ease-out duration-700 "
+        className="flex h-full w-full transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides.map((slide) => (
@@ -53,36 +48,36 @@ export default function Carousel({
             key={slide.id}
             src={slide.src}
             alt={"some"}
-            className="w-full object-cover shrink-0 "
+            className="w-full shrink-0 object-cover"
           />
         ))}
       </div>
       {/* control arrows */}
-      <div className="absolute inset-0 flex items-center justify-between bg-gradient-to-r from-black/40 from-5% via-transparent to-black/40 to-95% px-4 group-showArrow">
+      <div className="group-showArrow absolute inset-0 flex items-center justify-between bg-gradient-to-r from-black/40 from-5% via-transparent to-black/40 to-95% px-4">
         <button
           onClick={prev}
-          className=" text-white hover:text-textHover transition-colors duration-200"
+          className="rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
         >
-          <ChevronLeft size={40} />
+          <ChevronLeft size={30} />
         </button>
         <button
           onClick={next}
-          className="text-white hover:text-textHover transition-colors duration-200 "
+          className="rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
         >
-          <ChevronRight size={40} />
+          <ChevronRight size={30} />
         </button>
       </div>
       {/* dots */}
-      <div className="absolute bottom-4 right-0 left-0">
+      <div className="absolute bottom-4 left-0 right-0">
         <div className="flex items-center justify-center gap-2">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
               onClick={() => goToSlide(index)}
-              className={`
-              transition-all w-3 h-3 bg-black border border-gray-200/60 rounded-full cursor-pointer
-              ${curr === index ? "scale-150" : "bg-opacity-50"}
-            `}
+              className={cn(
+                "h-[6px] w-4 cursor-pointer rounded-full bg-black/60 transition-all",
+                curr === index && "w-10 bg-black",
+              )}
             />
           ))}
         </div>

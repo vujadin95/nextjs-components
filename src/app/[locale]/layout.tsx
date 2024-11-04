@@ -25,17 +25,13 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${inter.className}  antialiased relative bg-background`}
-      >
+      <body className={`${inter.className} relative bg-background antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
-            <div className="w-full z-50 fixed top-0 h-[60px] border-b border-border shadow-[s0px_20px_20px_0px_#00000024]">
+            <div className="fixed top-0 z-50 h-[60px] w-full border-b border-border bg-background shadow-[s0px_20px_20px_0px_#00000024]">
               <Header />
             </div>
-            <main className="pt-[60px] max-w-screen-2xl mx-auto px-4">
-              {children}
-            </main>
+            <main className="pt-[60px]">{children}</main>
           </Providers>
         </NextIntlClientProvider>
       </body>
