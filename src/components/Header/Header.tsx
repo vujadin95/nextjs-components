@@ -14,46 +14,7 @@ import {
   Truck,
 } from "lucide-react";
 import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
-import Dropdown from "../Dropdown/Dropdown";
 
-const data = [
-  {
-    id: "1",
-    name: "Minnie Barrett",
-    imageUrl:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "2",
-    name: "Andy Holmes",
-    imageUrl:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "3",
-    name: "Felicia Watts",
-    imageUrl:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "4",
-    name: "Hailey Green",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "5",
-    name: "Jeremiah Hughes",
-    imageUrl:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "6",
-    name: "Amy Perkins",
-    imageUrl:
-      "https://images.unsplash.com/photo-1587677171791-8b93c752999b?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
 
 const Header = () => {
   const t = useTranslations("navigation");
@@ -136,15 +97,10 @@ const Header = () => {
     },
   ];
   return (
-    <header className="w-full max-w-screen-2xl mx-auto flex items-center justify-between gap-2 bg-background border-b border-border">
+    <header className="w-full h-full max-w-screen-2xl mx-auto flex items-center justify-between gap-2 bg-background px-4">
       <Logo />
       <DesktopNavigation navigation={navigation} />
-      <Dropdown
-        data={data}
-        id="person"
-        onSelect={() => console.log("nesto se desilo")}
-      />
-      <div className="flex items-center gap-2 ml-auto lg:ml-0">
+      <div className="flex shrink-0 items-center gap-2 ml-auto lg:ml-0">
         <ThemeSwitch />
         <LocaleSwitcher />
       </div>

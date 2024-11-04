@@ -3,7 +3,7 @@ import { NavigationTypes } from "./navigation.types";
 
 const DesktopNavigation = ({ navigation }: NavigationTypes) => {
   return (
-    <ul className="hidden lg:flex items-center relative w-full justify-center">
+    <ul className="hidden h-full lg:flex items-center shrink-0 relative justify-center">
       {navigation.map((menu) => (
         <DesktopNavigationItem menu={menu} key={menu.title} />
       ))}

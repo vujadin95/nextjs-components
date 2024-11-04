@@ -10,14 +10,14 @@ export default function MobileNavigation({ navigation }: NavigationTypes) {
   return (
     <div>
       <button
-        className="lg:hidden z-[40] relative"
+        className="lg:hidden z-[20] relative"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <X /> : <Menu />}
+        {isOpen ? <X size={30} /> : <Menu size={30} />}
       </button>
 
       {isOpen && (
-        <div className="fixed left-0 right-0 top-[60px] overflow-y-auto h-full bg-background  text-textColor p-6 pb-20">
+        <div className="fixed select-none bg-background text-textColor left-0 right-0 top-[60px] overflow-y-auto h-full p-6 pb-20">
           <ul>
             {navigation.map((menu) => {
               return <MobileNavItem menu={menu} key={menu.title} />;

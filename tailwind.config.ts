@@ -25,6 +25,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--background))",
           // foreground: "hsl(var(--primary-foreground))",
         },
+        hoverBackground: "hsl(var(--text-color) / 0.1)",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

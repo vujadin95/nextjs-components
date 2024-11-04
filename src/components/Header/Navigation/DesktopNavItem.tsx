@@ -7,12 +7,12 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
 
   return (
     <li
-      className="group/link hover:h-[60px] flex items-center"
+      className="group/link hover:h-full flex items-center"
       key={menu.title}
     >
       <Link
         href={menu.href}
-        className="flex font-semibold items-center gap-1 cursor-pointer px-3 py-2 rounded-sm transition-all group-hover/link:bg-textColor/10"
+        className="flex font-semibold items-center gap-1 cursor-pointer px-3 py-2 rounded-sm transition-all group-hover/link:bg-hoverBackground"
       >
         {menu.title}
         {hasSubMenu && (
@@ -23,20 +23,19 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
         )}
       </Link>
       {hasSubMenu && (
-        <div className="hidden absolute top-full origin-top p-4 rounded-md bg-background group-hover/link:grid border border-border">
+        <div className="hidden absolute w-max top-full origin-top p-4 rounded-md bg-background group-hover/link:grid border border-border">
           <div
-            className={`grid gap-4 ${
-              menu.gridCols === 3
-                ? "grid-cols-3"
-                : menu.gridCols === 2
+            className={`grid gap-4 ${menu.gridCols === 3
+              ? "grid-cols-3"
+              : menu.gridCols === 2
                 ? "grid-cols-2"
                 : "grid-cols-1"
-            }`}
+              }`}
           >
             {hasSubMenu &&
               menu.subMenu?.map((submenu, i) => (
                 <div
-                  className="cursor-pointer hover:bg-textColor/10 rounded-sm flex items-center p-1 transition-colors "
+                  className="cursor-pointer hover:bg-hoverBackground rounded-sm flex items-center p-1 transition-colors "
                   key={i}
                 >
                   <Link

@@ -1,8 +1,15 @@
 {
   "LocaleSwitcher": {
-    "label": "Change language",
-    "english": "English",
-    "serbian": "Serbian"
+    "english": {
+      "label": "English",
+      "locale": "en",
+      "flagPath": "/flags/united-kingdom.png"
+    },
+    "serbian": {
+      "label": "Serbian",
+      "locale": "sr",
+      "flagPath": "/flags/serbia.png"
+    }
   },
   "navigation": {
     "linkOne": {

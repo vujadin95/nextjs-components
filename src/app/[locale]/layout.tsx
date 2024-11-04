@@ -30,7 +30,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
-            <div className="w-full z-50 fixed top-0 h-[61px] border-b border-border shadow-[s0px_20px_20px_0px_#00000024] px-4s">
+            <div className="w-full z-50 fixed top-0 h-[60px] border-b border-border shadow-[s0px_20px_20px_0px_#00000024]">
               <Header />
             </div>
             <main className="pt-[60px] max-w-screen-2xl mx-auto px-4">

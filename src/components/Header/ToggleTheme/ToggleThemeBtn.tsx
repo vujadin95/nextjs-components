@@ -28,7 +28,7 @@ export default function ThemeSwitch() {
   if (resolvedTheme === "dark") {
     return (
       <Sun
-        className="cursor-pointer p-[6px] w-9 h-9"
+        className="cursor-pointer p-[6px] w-9 h-9 border border-border rounded-md hover:bg-hoverBackground transition-colors duration-150"
         onClick={() => setTheme("light")}
       />
     );
@@ -36,7 +36,7 @@ export default function ThemeSwitch() {
   if (resolvedTheme === "light") {
     return (
       <MoonStar
-        className="cursor-pointer p-[6px] w-9 h-9"
+        className="cursor-pointer p-[6px] w-9 h-9 border border-border rounded-md hover:bg-hoverBackground transition-colors duration-150"
         onClick={() => setTheme("dark")}
       />
     );
