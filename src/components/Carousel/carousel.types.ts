@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export interface CarouselItemProps {
-  src: string | StaticImageData;
+  src: StaticImageData;
   id: number;
   text?: string;
 }

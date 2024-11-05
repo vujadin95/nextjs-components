@@ -8,7 +8,7 @@ import { cn } from "@/utils/utils";
 export default function Carousel({
   slides,
   autoSlide = true,
-  autoSlideInterval = 4000
+  autoSlideInterval = 4000,
 }: CarouselProps) {
   const [curr, setCurr] = useState(0);
   const [isAutoSliding, setIsAutoSliding] = useState(autoSlide);
@@ -38,22 +38,21 @@ export default function Carousel({
   };
 
   return (
-    <div className="relative h-full w-full overflow-hidden select-none">
+    <div className="relative h-full w-full select-none overflow-hidden rounded-md">
       <div
-        className="h-full w-full flex transition-transform duration-500 ease-in-out"
+        className="flex h-full w-full rounded-md transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
-        {
-          slides.map((slide) => (
-            <Image
-              key={slide.id}
-              src={slide.src}
-              alt={"some"}
-              placeholder="blur"
-              className="w-full h-auto shrink-0 object-scale-down"
-            />
-          ))
-        }
+        {slides.map((slide) => (
+          <Image
+            key={slide.id}
+            src={slide.src}
+            alt={"some"}
+            placeholder="blur"
+            loading="lazy"
+            className="h-auto w-full shrink-0 rounded-md object-cover"
+          />
+        ))}
       </div>
       {/* control arrows */}
 
@@ -61,14 +60,13 @@ export default function Carousel({
         <ChevronLeft
           onClick={prev}
           size={40}
-          className="rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 cursor-pointer"
+          className="cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
         />
         <ChevronRight
           size={40}
           onClick={next}
-          className="rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 cursor-pointer"
+          className="cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
         />
-
       </div>
 
       {/* dots */}
@@ -90,25 +88,26 @@ export default function Carousel({
   );
 }
 
-
 export const TestCarousel = ({
   slides,
   autoSlide = true,
-  autoSlideInterval = 4000
-}: { slides: { url: string, id: number }[], autoSlide?: boolean, autoSlideInterval?: number }) => {
+  autoSlideInterval = 4000,
+}: {
+  slides: { url: string; id: number }[];
+  autoSlide?: boolean;
+  autoSlideInterval?: number;
+}) => {
   const [curr, setCurr] = useState(0);
   const [isAutoSliding, setIsAutoSliding] = useState(autoSlide);
 
   const prev = () => {
     setIsAutoSliding(false);
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-
   };
 
   const next = () => {
     setIsAutoSliding(false);
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-
   };
   const nextAutoSlide = () => {
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
@@ -125,9 +124,9 @@ export const TestCarousel = ({
     setCurr(clickedImageIndex);
   };
   return (
-    <div className="relative h-full w-full overflow-hidden select-none">
+    <div className="relative h-full w-full select-none overflow-hidden">
       <div
-        className="h-full w-full flex duration-700 bg-center bg-cover z-50"
+        className="z-50 flex h-full w-full bg-cover bg-center duration-700"
         style={{ backgroundImage: `url(${slides[curr].url})` }}
       >
         {/* <Image
@@ -137,7 +136,6 @@ export const TestCarousel = ({
           placeholder="blur"
           className="w-full h-auto shrink-0 object-cover"
         /> */}
-
       </div>
       {/* control arrows */}
 
@@ -145,14 +143,13 @@ export const TestCarousel = ({
         <ChevronLeft
           onClick={prev}
           size={40}
-          className="rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 cursor-pointer"
+          className="cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
         />
         <ChevronRight
           size={40}
           onClick={next}
-          className="rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 cursor-pointer"
+          className="cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
         />
-
       </div>
 
       {/* dots */}
@@ -172,5 +169,4 @@ export const TestCarousel = ({
       </div>
     </div>
   );
-
-}
+};
