@@ -18,22 +18,22 @@ const Brand = ({ path, brandName, img, bgColor }: BrandType) => {
         bgColor && "text-black",
       )}
     >
-      <div className="flex items-center justify-center">
-        <div className="relative h-28 w-48 text-red-500">
-          <Image
-            src={img}
-            alt={brandName}
-            fill
-            sizes="(max-width: 140px) 100vw"
-            className="object-scale-down"
-          />
-        </div>
+      <div className="flex items-center justify-center relative h-28 w-48 text-red-500">
+        <Image
+          src={img}
+          alt={brandName}
+          fill
+          sizes="(max-width: 140px) 100vw"
+          className="object-scale-down"
+        />
       </div>
-      <p className="w-full py-1 text-center text-sm font-semibold sm:text-base">
-        {brandName}
-      </p>
+
     </a>
   );
 };
 
 export default Brand;
+//
+/* <p className="w-full py-1 text-center text-sm font-semibold sm:text-base">
+        {brandName}
+   </p> */

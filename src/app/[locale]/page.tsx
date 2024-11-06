@@ -37,7 +37,11 @@ export default function Home() {
       <section className="mx-auto mt-4 h-[700px] w-full max-w-screen-2xl">
         <Carousel slides={slidesImage} />
       </section>
-      <section className="my-10 h-96">
+      <section className="my-10 h-96 flex flex-col items-center overflow-hidden">
+        <div className="mt-10 mb-6 text-center">
+          <h2 className="text-6xl mb-2 font-semibold">Our associates</h2>
+          <p>We are working only with the best </p>
+        </div>
         <Brands />
       </section>
     </>

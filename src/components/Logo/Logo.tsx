@@ -5,7 +5,7 @@ import logoLight from "../../../public/logo/superheat-white.png";
 
 const Logo = () => {
   return (
-    <Link className="relative select-none flex items-center" href={"/"}>
+    <Link className="relative select-none flex items-center w-fit" href={"/"}>
       <Image
         src={logoBlack}
         alt="Superheat Logo for light theme"

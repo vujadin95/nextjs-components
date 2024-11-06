@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default async function RootLayout({
             <main className="mx-auto max-w-screen-2xl px-4 pt-[60px]">
               {children}
             </main>
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>
