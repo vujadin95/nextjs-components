@@ -103,6 +103,12 @@
     }
   },
   "footer": {
-    "slogan": "Koristeći nove tehnologije i pravilno dimenzionisanu opremu, činimo vaše poslovanje efikasnijim."
+    "slogan": "Koristeći nove tehnologije i pravilno dimenzionisanu opremu, činimo vaše poslovanje efikasnijim.",
+    "headquarters": "Sedište",
+    "manufacturing&warehouse": "Proizvodnja i Magacin",
+    "officialEmail": "Oficijalni",
+    "commercialService": "Komercijalno odeljenje",
+    "technicalDepartment": "Tehničko odeljenje",
+    "finance": "Finansije"
   }
 }

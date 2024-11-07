@@ -9,6 +9,7 @@ import img9 from "../../../public/hero-slider-images/9.jpg";
 import img10 from "../../../public/hero-slider-images/10.jpg";
 import img11 from "../../../public/hero-slider-images/11.jpg";
 import Brands from "@/components/Brands/Brands";
+import ImageMask from "@/components/ImageMask";
 
 export default function Home() {
   const slidesImage = [

@@ -106,6 +106,12 @@
     }
   },
   "footer": {
-    "slogan": "Using new technologies and properly sized equipment, we are making your business more efficient."
+    "slogan": "Using new technologies and properly sized equipment, we are making your business more efficient.",
+    "headquarters": "Headquarters",
+    "manufacturing&warehouse": "Manifacturing & Warehouse",
+    "officialEmail": "Official",
+    "commercialService": "Commercial",
+    "technicalDepartment": "Technical",
+    "finance": "Finance"
   }
 }

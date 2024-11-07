@@ -26,7 +26,18 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.className} relative bg-background antialiased`}>
+      <body className={
+        `${inter.className} 
+        relative bg-background antialiased 
+        [&::-webkit-scrollbar]:w-[10px]
+        [&::-webkit-scrollbar-track]:rounded-sm
+        [&::-webkit-scrollbar-track]:bg-gray-100
+        [&::-webkit-scrollbar-thumb]:rounded-sm
+        [&::-webkit-scrollbar-thumb]:bg-gray-300
+        dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+        dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500`
+      }
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <div className="fixed top-0 z-50 h-[60px] w-full border-b border-border bg-background shadow-[s0px_20px_20px_0px_#00000024]">
