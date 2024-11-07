@@ -18,7 +18,7 @@ const Brand = ({ path, brandName, img, bgColor }: BrandType) => {
         bgColor && "text-black",
       )}
     >
-      <div className="flex items-center justify-center relative h-28 w-48 text-red-500">
+      <div className="relative flex h-28 w-48 items-center justify-center">
         <Image
           src={img}
           alt={brandName}
@@ -27,13 +27,8 @@ const Brand = ({ path, brandName, img, bgColor }: BrandType) => {
           className="object-scale-down"
         />
       </div>
-
     </a>
   );
 };
 
 export default Brand;
-//
-/* <p className="w-full py-1 text-center text-sm font-semibold sm:text-base">
-        {brandName}
-   </p> */

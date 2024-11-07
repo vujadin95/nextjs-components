@@ -18,7 +18,6 @@ export const brandsCollecton = [
     path: "https://www.danfoss.com/en/",
     brandName: "Danfoss",
     img: "/brands/danfoss.svg",
-    // bgColor: "bg-red-600",
   },
   {
     id: 4,

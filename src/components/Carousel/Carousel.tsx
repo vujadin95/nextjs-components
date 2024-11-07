@@ -56,7 +56,7 @@ export default function Carousel({
       </div>
       {/* control arrows */}
 
-      <div className="absolute inset-0 flex items-center justify-between bg-gradient-to-r from-black/40 from-5% via-transparent to-black/40 to-95% px-4">
+      <div className="absolute inset-0 flex items-center justify-between px-4">
         <ChevronLeft
           onClick={prev}
           size={40}
