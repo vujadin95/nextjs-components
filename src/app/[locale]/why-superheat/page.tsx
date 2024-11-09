@@ -1,10 +1,10 @@
 import Maintenance from "@/components/Maintenance/Maintenance"
 
-const AboutUs = () => {
+const WhySuperheat = () => {
  return (
   <div>
    <Maintenance />
   </div>
  )
 }
-export default AboutUs
+export default WhySuperheat

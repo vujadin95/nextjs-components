@@ -23,7 +23,7 @@ export default function Home() {
   ];
   return (
     <>
-      <section className="mx-auto mt-4 h-[calc(100vh_-_84px)] w-full max-w-screen-2xl">
+      <section className="mt-4 h-[calc(100vh_-_84px)] w-full ">
         <Carousel slides={slidesImage} />
       </section>
       <section className="my-5 flex h-[500px] flex-col items-center justify-center overflow-hidden">

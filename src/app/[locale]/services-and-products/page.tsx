@@ -1,5 +1,7 @@
+import Maintenance from "@/components/Maintenance/Maintenance";
+
 const ServicesAndProducts = () => {
-  return <div></div>;
+  return <div><Maintenance /></div>;
 };
 
 export default ServicesAndProducts;
