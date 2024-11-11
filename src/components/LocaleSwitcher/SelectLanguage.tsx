@@ -2,10 +2,11 @@
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { MouseEvent, useRef, useState, useTransition } from "react";
 import { cn } from "@/utils/utils";
 import { useClickOutside } from "@/utils/hooks/useClickOutside";
+import { useTranslations } from "next-intl";
 
 interface SelectProps {
   languageDetails: { locale: string, label: string, flagPath: string }[],
@@ -16,7 +17,8 @@ const SelectLanguage = ({ languageDetails, defaultLanguage }: SelectProps) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
-  const params = useParams();
+  const searchParams = useSearchParams();
+  const t = useTranslations('localeSwitch')
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -25,29 +27,26 @@ const SelectLanguage = ({ languageDetails, defaultLanguage }: SelectProps) => {
   const changeLanguage = (event: MouseEvent<HTMLButtonElement>) => {
     const nextLocale = event.currentTarget.id as Locale;
     startTransition(() => {
-      router.replace(
-        // @ts-expect-error -- TypeScript will validate that only known `params`
-        // are used in combination with a given `pathname`. Since the two will
-        // always match for the current route, we can skip runtime checks.
-        { pathname, params },
-        { locale: nextLocale }
-      );
+      router.replace(`${pathname}?${new URLSearchParams(searchParams)}`, {
+        locale: nextLocale,
+      });
+      router.refresh();
     });
   };
-
 
   return (
     <div ref={dropdownRef} className="relative select-none">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={cn("flex justify-between items-center gap-1 text-nowrap w-full rounded-sm py-2 px-3 border border-border hover:bg-hoverBackground transition-colors duration-150", isPending && 'text-gray-400')}>
+        className={cn("flex justify-between items-center gap-1 text-nowrap w-full rounded-md py-[6px] px-3 border border-border hover:bg-hoverBackground transition-colors duration-150", isPending && 'text-gray-400')}>
 
-        {defaultLanguage?.flagPath && (<Image
-          src={defaultLanguage?.flagPath}
-          alt="Languange Image"
-          width={24}
-          height={24}
-        />)
+        {defaultLanguage?.flagPath && (
+          <Image
+            src={defaultLanguage?.flagPath}
+            alt="Languange Image"
+            width={24}
+            height={24}
+          />)
         }
         <span>{defaultLanguage?.label || "Choose Language"}</span>
 
@@ -57,14 +56,31 @@ const SelectLanguage = ({ languageDetails, defaultLanguage }: SelectProps) => {
         />
       </button>
       {isOpen && (
-        <ul className="top-full right-0 mt-2 absolute bg-background w-max py-2 rounded-md shadow-md z-10 border border-border">
+
+        <div className="right-0 mt-1 absolute bg-background w-40 p-1 rounded-md shadow-md z-10 border border-border text-sm">
+          <span className="block px-3 py-2 border-b border-border mb-1">
+            {t('selectLanguageLabel')}
+          </span>
+
           {languageDetails.map(lang => (
-            <button disabled={lang.locale === defaultLanguage?.locale} key={lang.locale} id={lang.locale} onClick={changeLanguage} className="w-full flex items-center cursor-pointer px-3 hover:bg-border/50 py-1 disabled:text-gray-400 disabled:cursor-not-allowed">
-              <Image src={lang.flagPath} loading="lazy" alt="" width={24} height={24} className="object-cover me-2" />
+            <button
+              disabled={lang.locale === defaultLanguage?.locale}
+              key={lang.locale} id={lang.locale}
+              onClick={changeLanguage}
+              className="w-full flex items-center cursor-pointer py-[6px] px-2  hover:bg-border/50 disabled:text-gray-400 disabled:cursor-auto disabled:hover:bg-transparent rounded-sm"
+            >
+              <Image
+                src={lang.flagPath}
+                loading="lazy"
+                alt=""
+                width={24}
+                height={24}
+                className="object-cover me-2"
+              />
               <span>{lang.label}</span>
             </button>
           ))}
-        </ul>
+        </div>
       )}
 
     </div>

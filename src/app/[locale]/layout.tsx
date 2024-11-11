@@ -1,7 +1,7 @@
 import Header from "@/components/Header/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { Providers } from "./providers";
+import { ThemeProvider } from "./providers";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -39,15 +39,20 @@ export default async function RootLayout({
       }
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>
-            <div className="fixed top-0 z-50 h-[60px] w-full border-b border-border bg-background shadow-[s0px_20px_20px_0px_#00000024]">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="fixed top-0 z-50 h-[60px] w-screen border-b border-border bg-background shadow-[s0px_20px_20px_0px_#00000024]">
               <Header />
             </div>
-            <main className="mx-auto max-w-screen-2xl px-4 pt-[60px]">
+            <main className="mx-auto container px-4 pt-[60px]">
               {children}
             </main>
             <Footer />
-          </Providers>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,5 +1,6 @@
 {
-  "LocaleSwitcher": {
+  "localeSwitch": {
+    "selectLanguageLabel": "Odaberi jezik",
     "english": {
       "label": "Engleski",
       "locale": "en",
@@ -10,6 +11,11 @@
       "locale": "sr",
       "flagPath": "/flags/serbia.png"
     }
+  },
+  "themeSwitch": {
+    "light": "Svetlo",
+    "dark": "Tamno",
+    "system": "Sistem"
   },
   "navigation": {
     "linkOne": {

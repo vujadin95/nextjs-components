@@ -1,5 +1,6 @@
 {
-  "LocaleSwitcher": {
+  "localeSwitch": {
+    "selectLanguageLabel": "Select Language",
     "english": {
       "label": "English",
       "locale": "en",
@@ -11,6 +12,12 @@
       "flagPath": "/flags/serbia.png"
     }
   },
+  "themeSwitch": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+
   "navigation": {
     "linkOne": {
       "title": "Services & Products",
