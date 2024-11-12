@@ -48,7 +48,7 @@ export default async function RootLayout({
             <div className="fixed top-0 z-50 h-[60px] w-screen border-b border-border bg-background shadow-[s0px_20px_20px_0px_#00000024]">
               <Header />
             </div>
-            <main className="mx-auto container px-4 pt-[60px]">
+            <main className="mx-auto max-w-screen-2xl px-4 pt-[60px]">
               {children}
             </main>
             <Footer />
