@@ -17,7 +17,6 @@
     "dark": "Dark",
     "system": "System"
   },
-
   "navigation": {
     "linkOne": {
       "title": "Services & Products",
@@ -25,25 +24,25 @@
       "subMenuItems": {
         "subMenuOne": {
           "title": "Design",
-          "href": "/services-and-products/#designing",
+          "href": "/services-and-products/design",
           "description": "Komplete licence designer",
           "icon": "DraftingCompassIcon"
         },
         "subMenuTwo": {
           "title": "Production",
-          "href": "/services-and-products/#production",
+          "href": "/services-and-products/production",
           "description": "Production using quality materials and equipment",
           "icon": "Cog"
         },
         "subMenuThree": {
           "title": "Savings",
-          "href": "/services-and-products/#savings",
+          "href": "/services-and-products/savings",
           "description": "Improving performance and saving energy",
           "icon": "Leaf"
         },
         "subMenuFour": {
           "title": "Product Distribution",
-          "href": "/services-and-products/#distribution",
+          "href": "/services-and-products/product-distribution",
           "description": "Quality product distribution",
           "icon": "Truck"
         }
@@ -56,19 +55,19 @@
       "subMenuItems": {
         "subMenuOne": {
           "title": "Cooling",
-          "href": "/solutions/#cooling",
+          "href": "/solutions/cooling",
           "description": "Cooling solutions",
           "icon": "Snowflake"
         },
         "subMenuTwo": {
           "title": "Air conditioning",
-          "href": "/solutions/#air-conditioning",
+          "href": "/solutions/air-conditioning",
           "description": "Air conditioning solutions",
           "icon": "Fan"
         },
         "subMenuThree": {
           "title": "Savings",
-          "href": "/services-and-products/#savings",
+          "href": "/solutions/savings",
           "description": "Improving performance and saving energy",
           "icon": "Leaf"
         }
@@ -85,7 +84,7 @@
       "subMenuItems": {
         "subMenuOne": {
           "title": "Our Story",
-          "href": "/about-us/#our-story",
+          "href": "/about-us/our-story",
           "description": "Who are we and what we stand for?",
           "icon": "Building2"
         }
@@ -96,7 +95,6 @@
       "href": "/contact"
     }
   },
-
   "HomePage": {
     "title": "Home Page",
     "writtableStrings": {
@@ -112,6 +110,45 @@
       "stringFour": { "value": "WE WILL MAKE YOUR BUSINESS MORE EFFICIENT" }
     }
   },
+  "servicesAndProducts": {
+    "pagetitle": "Services And Products",
+    "design": {
+      "pagetitle": "Design"
+    },
+    "production": {
+      "pagetitle": "Production"
+    },
+    "savings": {
+      "pagetitle": "Savings"
+    },
+    "productDistribution": {
+      "pagetitle": "Product Distribution"
+    }
+  },
+  "solutions": {
+    "pagetitle": "Solutions",
+    "airConditioning": {
+      "pagetitle": "Air Conditioning"
+    },
+    "cooling": {
+      "pagetitle": "Cooling"
+    },
+    "solutionSavings": {
+      "pagetitle": "Savings"
+    }
+  },
+  "whySuperheat": {
+    "pagetitle": "Why Superheat"
+  },
+  "aboutUs": {
+    "pagetitle": "About Us",
+    "ourStory": {
+      "pagetitle": "Our Story"
+    }
+  },
+  "contact": {
+    "pagetitle": "Contact"
+  },
   "footer": {
     "slogan": "Using new technologies and properly sized equipment, we are making your business more efficient.",
     "headquarters": "Headquarters",
@@ -120,5 +157,10 @@
     "commercialService": "Commercial",
     "technicalDepartment": "Technical",
     "finance": "Finance"
+  },
+  "maintenance": {
+    "heading": "Website under maintenance!",
+    "subheading": "We'll be back soon.",
+    "contactuslabel": "You can contact us:"
   }
 }

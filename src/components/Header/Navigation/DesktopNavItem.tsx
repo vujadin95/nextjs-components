@@ -39,7 +39,7 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
                   key={i}
                 >
                   <Link
-                    href={"/"}
+                    href={submenu.href}
                     className="flex gap-3 items-center group/menubox"
                   >
                     <div className="w-fit p-2 rounded-md">

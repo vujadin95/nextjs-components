@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl"
 import Logo from "../Logo/Logo"
 import useNavigationData from "../Header/Navigation/useNavigation";
-import { Link } from "@/i18n/routing";
+import { Link, Pathnames } from "@/i18n/routing";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
@@ -97,13 +97,13 @@ const Footer = () => {
           <div>
             <Link
               className="text-md font-semibold leading-6 hover:text-textHover transition-colors"
-              href={navigation[0].href}>
+              href={navigation[0].href as Pathnames}>
               {navigation[0].title}
             </Link>
             <ul className="mt-3">
               {navigation[0]?.subMenu?.map(subMenuItem => (
                 <li key={subMenuItem.title} className="hover:bg-hoverBackground transition-colors rounded-sm">
-                  <Link className="w-full inline-block p-1" href={subMenuItem.href}>
+                  <Link className="w-full inline-block p-1" href={subMenuItem.href as Pathnames}>
                     {subMenuItem.title}
                   </Link>
                 </li>))}
@@ -114,13 +114,13 @@ const Footer = () => {
           <div>
             <Link
               className="text-md font-semibold leading-6 hover:text-textHover transition-colors"
-              href={navigation[1].href}>
+              href={navigation[1].href as Pathnames}>
               {navigation[1].title}
             </Link>
             <ul className="mt-3">
               {navigation[1]?.subMenu?.map(subMenuItem => (
                 <li key={subMenuItem.title} className="hover:bg-hoverBackground transition-colors rounded-sm">
-                  <Link className="w-full inline-block p-1" href={subMenuItem.href}>
+                  <Link className="w-full inline-block p-1" href={subMenuItem.href as Pathnames}>
                     {subMenuItem.title}
                   </Link>
                 </li>))}
@@ -131,17 +131,17 @@ const Footer = () => {
           <div className="flex flex-col space-y-3">
             <Link
               className="text-md font-semibold leading-6 hover:text-textHover transition-colors p-1"
-              href={navigation[2].href}>
+              href={navigation[2].href as Pathnames}>
               {navigation[2].title}
             </Link>
             <Link
               className="text-md mt-3 font-semibold leading-6 hover:text-textHover transition-colors p-1"
-              href={navigation[3].href}>
+              href={navigation[3].href as Pathnames}>
               {navigation[3].title}
             </Link>
             <Link
               className="text-md  font-semibold leading-6 hover:text-textHover transition-colors p-1"
-              href={navigation[4].href}>
+              href={navigation[4].href as Pathnames}>
               {navigation[4].title}
             </Link>
           </div>

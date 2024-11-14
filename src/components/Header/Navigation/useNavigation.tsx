@@ -8,6 +8,7 @@ import {
  Snowflake,
  Truck,
 } from "lucide-react";
+import { NavigationTypes } from "./navigation.types";
 
 
 const useNavigationData = () => {

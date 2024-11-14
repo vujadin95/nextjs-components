@@ -28,6 +28,9 @@ const config: Config = {
 
         border: "hsl(var(--border))",
       },
+      screens: {
+        phone: "360px",
+      },
       keyframes: {
         "slide-left": {
           to: { transform: "translateX(calc(-100% - 20px))" },

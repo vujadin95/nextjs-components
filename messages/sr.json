@@ -24,25 +24,25 @@
       "subMenuItems": {
         "subMenuOne": {
           "title": "Projektovanje",
-          "href": "/services-and-products/#designing",
+          "href": "/services-and-products/design",
           "description": "Kompletni licencirani projekti",
           "icon": "DraftingCompassIcon"
         },
         "subMenuTwo": {
           "title": "Sopstvena Proizvodnja",
-          "href": "/services-and-products/#production",
+          "href": "/services-and-products/production",
           "description": "Proizvodja upotrebom kvalitetnih materijala i opreme",
           "icon": "Cog"
         },
         "subMenuThree": {
           "title": "Sistemi za uštedu",
-          "href": "/services-and-products/#savings",
+          "href": "/services-and-products/savings",
           "description": "Poboljšanje performansi i ušteda energije",
           "icon": "Leaf"
         },
         "subMenuFour": {
           "title": "Distribucija proizvoda",
-          "href": "/services-and-products/#distribution",
+          "href": "/services-and-products/product-distribution",
           "description": "Kvalitetna distribucija proizvoda",
           "icon": "Truck"
         }
@@ -55,19 +55,19 @@
       "subMenuItems": {
         "subMenuOne": {
           "title": "Hlađenje",
-          "href": "/solutions/#cooling",
+          "href": "/solutions/cooling",
           "description": "Hlađenje",
           "icon": "Snowflake"
         },
         "subMenuTwo": {
           "title": "Klimatizacija",
-          "href": "/solutions/#air-conditioning",
+          "href": "/solutions/air-conditioning",
           "description": "Klimatizacija",
           "icon": "Fan"
         },
         "subMenuThree": {
           "title": "Sistemi za uštedu",
-          "href": "/services-and-products/#savings",
+          "href": "/solutions/savings",
           "description": "Poboljšanje performansi i ušteda energije",
           "icon": "Leaf"
         }
@@ -84,7 +84,7 @@
       "subMenuItems": {
         "subMenuOne": {
           "title": "Naša priča",
-          "href": "/about-us/#our-story",
+          "href": "/about-us/our-story",
           "description": "Ko smo mi i šta predstavljamo?",
           "icon": "Building2"
         }
@@ -108,6 +108,45 @@
       "stringFour": { "value": "UČINIĆEMO VAŠ BIZNIS EFIKASNIJIM" }
     }
   },
+  "servicesAndProducts": {
+    "pagetitle": "Usluge i Rešenja",
+    "design": {
+      "pagetitle": "Projektovanje"
+    },
+    "production": {
+      "pagetitle": "Proizvodnja"
+    },
+    "savings": {
+      "pagetitle": "Ušteda"
+    },
+    "productDistribution": {
+      "pagetitle": "Distribucija Proizvoda"
+    }
+  },
+  "solutions": {
+    "pagetitle": "Rešenja",
+    "airConditioning": {
+      "pagetitle": "Klimatizacija"
+    },
+    "cooling": {
+      "pagetitle": "Hlađenje"
+    },
+    "solutionSavings": {
+      "pagetitle": "Ušteda"
+    }
+  },
+  "whySuperheat": {
+    "pagetitle": "Zašto Superheat"
+  },
+  "aboutUs": {
+    "pagetitle": "O Nama",
+    "ourStory": {
+      "pagetitle": "Naša Priča"
+    }
+  },
+  "contact": {
+    "pagetitle": "Kontakt"
+  },
   "footer": {
     "slogan": "Koristeći nove tehnologije i pravilno dimenzionisanu opremu, činimo vaše poslovanje efikasnijim.",
     "headquarters": "Sedište",
@@ -116,5 +155,10 @@
     "commercialService": "Komercijalno odeljenje",
     "technicalDepartment": "Tehničko odeljenje",
     "finance": "Finansije"
+  },
+  "maintenance": {
+    "heading": "Stranca u izradi!",
+    "subheading": "Bicemo uskoro tu.",
+    "contactuslabel": "Možete nas kontaktirati na:"
   }
 }

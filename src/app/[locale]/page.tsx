@@ -38,9 +38,8 @@ export default function Home() {
       <section className="h-[calc(100vh_-_100px)] flex flex-col lg:flex-row items-center gap-4 mt-5">
 
         <div className="lg:w-2/5 h-full flex flex-col w-full text-center items-center lg:text-left lg:items-start justify-center">
-          <h1 className="text-2xl lg:text-5xl font-extrabold leading-tight tracking-wide">Optimizacija procesa grejanja, hlađenja i klimatizacije.</h1>
+          <h1 className="text-2xl  lg:text-5xl font-extrabold lg:leading-tight tracking-wide text-wrap">Optimizacija procesa grejanja, hlađenja i klimatizacije.</h1>
           <div className="text-base xl:text-2xl w-[300px] lg:w-[400px] mt-2 mb-3 lg:mt-6 lg:mb-8 h-24 lg:h-28">
-            {/* <h2>Mi smo inovatori koji neprekidno nastoje da poboljšaju svoje sisteme i rešenja.</h2> */}
             <TextCarousel slides={slidesText} autoSlideInterval={5000} />
           </div>
           <button
