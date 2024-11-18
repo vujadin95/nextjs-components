@@ -34,7 +34,7 @@ export default function Carousel({
       clearInterval(intervalRef.current);
     }
     if (autoSlide) {
-      intervalRef.current = setInterval(nextAutoSlide, autoSlideInterval);
+      intervalRef.current = setInterval(next, autoSlideInterval);
     }
   };
 
@@ -42,7 +42,7 @@ export default function Carousel({
     if (!autoSlide) return;
 
     // Initialize auto-slide if enabled
-    intervalRef.current = setInterval(nextAutoSlide, autoSlideInterval);
+    intervalRef.current = setInterval(next, autoSlideInterval);
 
     // Cleanup interval on unmount or when autoSlide is turned off
     return () => {
@@ -60,7 +60,7 @@ export default function Carousel({
   return (
     <div className="relative h-full w-full select-none overflow-hidden rounded-sm">
       <div
-        className="flex h-full w-full bg-transparent rounded-sm transition-transform duration-500 ease-in-out"
+        className="flex h-full w-full rounded-sm bg-transparent transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides.map((slide) => (
@@ -70,7 +70,7 @@ export default function Carousel({
             alt={"some"}
             placeholder="blur"
             loading="lazy"
-            className="h-auto w-full shrink-0 rounded-sm object-cover aspect-video "
+            className="aspect-video h-auto w-full shrink-0 rounded-sm object-cover"
           />
         ))}
       </div>
@@ -79,12 +79,12 @@ export default function Carousel({
         <ChevronLeft
           onClick={prev}
           size={40}
-          className="group-hover:block hidden cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
+          className="hidden cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 group-hover:block"
         />
         <ChevronRight
           size={40}
           onClick={next}
-          className="group-hover:block hidden cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40"
+          className="hidden cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 group-hover:block"
         />
       </div>
 
@@ -97,7 +97,7 @@ export default function Carousel({
               onClick={() => goToSlide(index)}
               className={cn(
                 "h-2 w-2 cursor-pointer rounded-full bg-black/60 transition-all duration-200",
-                curr === index && "scale-150 bg-white ",
+                curr === index && "scale-150 bg-white",
               )}
             />
           ))}

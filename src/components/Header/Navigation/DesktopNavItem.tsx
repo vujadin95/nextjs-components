@@ -6,48 +6,46 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
   const hasSubMenu = menu?.subMenu?.length;
 
   return (
-    <li
-      className="group/link hover:h-full flex items-center"
-      key={menu.title}
-    >
+    <li className="group/link flex items-center hover:h-full" key={menu.title}>
       <Link
         href={menu.href}
-        className="flex font-semibold items-center gap-1 cursor-pointer px-3 py-2 rounded-sm transition-all group-hover/link:bg-hoverBackground"
+        className="flex cursor-pointer items-center gap-1 rounded-sm px-3 py-2 font-semibold transition-all group-hover/link:bg-hoverBackground"
       >
         {menu.title}
         {hasSubMenu && (
           <ChevronDown
             size={16}
-            className="group-hover/link:rotate-180 duration-200"
+            className="duration-200 group-hover/link:rotate-180"
           />
         )}
       </Link>
       {hasSubMenu && (
-        <div className="hidden absolute w-max top-full origin-top p-4 rounded-md bg-background group-hover/link:grid border border-border">
+        <div className="duraiton-500 absolute top-full hidden w-max origin-top rounded-md border border-border bg-background p-4 animate-out fade-out zoom-out-95 group-hover/link:grid group-hover/link:animate-in group-hover/link:zoom-in-90">
           <div
-            className={`grid gap-4 ${menu.gridCols === 3
-              ? "grid-cols-3"
-              : menu.gridCols === 2
-                ? "grid-cols-2"
-                : "grid-cols-1"
-              }`}
+            className={`grid gap-4 ${
+              menu.gridCols === 3
+                ? "grid-cols-3"
+                : menu.gridCols === 2
+                  ? "grid-cols-2"
+                  : "grid-cols-1"
+            }`}
           >
             {hasSubMenu &&
               menu.subMenu?.map((submenu, i) => (
                 <div
-                  className="cursor-pointer hover:bg-hoverBackground rounded-sm flex items-center p-1 transition-colors "
+                  className="flex cursor-pointer items-center rounded-sm p-1 transition-colors hover:bg-hoverBackground"
                   key={i}
                 >
                   <Link
                     href={submenu.href}
-                    className="flex gap-3 items-center group/menubox"
+                    className="group/menubox flex items-center gap-3"
                   >
-                    <div className="w-fit p-2 rounded-md">
+                    <div className="w-fit rounded-md p-2">
                       {submenu.icon && <submenu.icon />}
                     </div>
                     <div>
                       <h6 className="font-semibold">{submenu.title}</h6>
-                      <p className="text-sm text-textColor max-w-[150px]">
+                      <p className="max-w-[150px] text-sm text-textColor">
                         {submenu.description}
                       </p>
                     </div>

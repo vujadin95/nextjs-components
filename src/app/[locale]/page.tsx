@@ -23,33 +23,44 @@ export default function Home() {
     { src: img11, id: 8 },
   ];
   const slidesText = [
-    { text: "Pružamo kompletnu uslugu, od projektovanja do puštanja u rad.", id: 1 },
+    {
+      text: "Pružamo kompletnu uslugu, od projektovanja do puštanja u rad.",
+      id: 1,
+    },
     { text: "Realizujemo standardne i posebno prilagođene projekte.", id: 2 },
     { text: "Imamo sopstvenu proizvodnju i inženjering.", id: 3 },
     { text: "Mi smo kompetentan i pouzdan partner.", id: 4 },
     { text: "Stalno razvijamo nove tehnologije i rešenja.", id: 5 },
-    { text: "Životna sredina ostaje našoj deci, učinite nešto dobro za nju.", id: 6 },
-    { text: "Mi smo inovatori koji neprekidno nastoje da poboljšaju svoje sisteme i rešenja.", id: 7 },
-    { text: "Naši sistemi za uštedu mogu umanjiti Vaše račune za struju za 35%.", id: 8 },
+    {
+      text: "Životna sredina ostaje našoj deci, učinite nešto dobro za nju.",
+      id: 6,
+    },
+    {
+      text: "Mi smo inovatori koji neprekidno nastoje da poboljšaju svoje sisteme i rešenja.",
+      id: 7,
+    },
+    {
+      text: "Naši sistemi za uštedu mogu umanjiti Vaše račune za struju za 35%.",
+      id: 8,
+    },
     { text: "Unapređujemo svet grejanja, hlađenja i klimatizacije.", id: 9 },
-  ]
+  ];
   return (
     <>
-      <section className="h-[calc(100vh_-_100px)] flex flex-col lg:flex-row items-center gap-4 mt-5">
-
-        <div className="lg:w-2/5 h-full flex flex-col w-full text-center items-center lg:text-left lg:items-start justify-center">
-          <h1 className="text-2xl  lg:text-5xl font-extrabold lg:leading-tight tracking-wide text-wrap">Optimizacija procesa grejanja, hlađenja i klimatizacije.</h1>
-          <div className="text-base xl:text-2xl w-[300px] lg:w-[400px] mt-2 mb-3 lg:mt-6 lg:mb-8 h-24 lg:h-28">
+      <section className="mt-5 flex h-[calc(100vh_-_100px)] flex-col items-center gap-4 lg:flex-row">
+        <div className="flex h-full w-full flex-col items-center justify-center text-center lg:w-2/5 lg:items-start lg:text-left">
+          <h1 className="text-wrap text-2xl font-extrabold tracking-wide lg:text-5xl lg:leading-tight">
+            Optimizacija procesa grejanja, hlađenja i klimatizacije.
+          </h1>
+          <div className="mb-3 mt-2 h-24 w-[300px] text-base lg:mb-8 lg:mt-6 lg:h-28 lg:w-[400px] xl:text-2xl">
             <TextCarousel slides={slidesText} autoSlideInterval={5000} />
           </div>
-          <button
-            className="px-4 py-2 lg:px-8 lg:py-4 bg-textColor text-background w-fit font-bold rounded-md text-base xl:text-2xl hover:bg-textColor/80"
-          >
+          <button className="w-fit rounded-md bg-textColor px-4 py-2 text-base font-bold text-background hover:bg-textColor/80 lg:px-8 lg:py-4 xl:text-2xl">
             Contact Us
           </button>
         </div>
 
-        <div className="w-full xl:w-3/5 h-full">
+        <div className="h-[400px] w-full lg:h-[650px] xl:w-3/5">
           <Carousel slides={slidesImage} />
         </div>
       </section>
