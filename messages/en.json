@@ -18,79 +18,69 @@
     "system": "System"
   },
   "navigation": {
-    "linkOne": {
+    "servicesAndProducts": {
       "title": "Services & Products",
       "href": "/services-and-products",
-      "subMenuItems": {
-        "subMenuOne": {
-          "title": "Design",
-          "href": "/services-and-products/design",
-          "description": "Komplete licence designer",
-          "icon": "DraftingCompassIcon"
-        },
-        "subMenuTwo": {
-          "title": "Production",
-          "href": "/services-and-products/production",
-          "description": "Production using quality materials and equipment",
-          "icon": "Cog"
-        },
-        "subMenuThree": {
-          "title": "Savings",
-          "href": "/services-and-products/savings",
-          "description": "Improving performance and saving energy",
-          "icon": "Leaf"
-        },
-        "subMenuFour": {
-          "title": "Product Distribution",
-          "href": "/services-and-products/product-distribution",
-          "description": "Quality product distribution",
-          "icon": "Truck"
-        }
+      "design": {
+        "title": "Design",
+        "href": "/services-and-products/design",
+        "description": "Komplete licence designer"
+      },
+      "production": {
+        "title": "Production",
+        "href": "/services-and-products/production",
+        "description": "Production using quality materials and equipment"
+      },
+      "savings": {
+        "title": "Savings",
+        "href": "/services-and-products/savings",
+        "description": "Improving performance and saving energy"
+      },
+      "productDistribution": {
+        "title": "Product Distribution",
+        "href": "/services-and-products/product-distribution",
+        "description": "Quality product distribution"
       },
       "gridCols": "2"
     },
-    "linkTwo": {
+    "solutions": {
       "title": "Solutions",
       "href": "/solutions",
-      "subMenuItems": {
-        "subMenuOne": {
-          "title": "Cooling",
-          "href": "/solutions/cooling",
-          "description": "Cooling solutions",
-          "icon": "Snowflake"
-        },
-        "subMenuTwo": {
-          "title": "Air conditioning",
-          "href": "/solutions/air-conditioning",
-          "description": "Air conditioning solutions",
-          "icon": "Fan"
-        },
-        "subMenuThree": {
-          "title": "Savings",
-          "href": "/solutions/savings",
-          "description": "Improving performance and saving energy",
-          "icon": "Leaf"
-        }
+      "cooling": {
+        "title": "Cooling",
+        "href": "/solutions/cooling",
+        "description": "Cooling solutions",
+        "icon": "Snowflake"
+      },
+      "airConditioning": {
+        "title": "Air conditioning",
+        "href": "/solutions/air-conditioning",
+        "description": "Air conditioning solutions",
+        "icon": "Fan"
+      },
+      "savings": {
+        "title": "Savings",
+        "href": "/solutions/savings",
+        "description": "Improving performance and saving energy",
+        "icon": "Leaf"
       },
       "gridCols": "2"
     },
-    "linkThree": {
+    "whySuperheat": {
       "title": "Why Superheat",
       "href": "/why-superheat"
     },
-    "linkFour": {
+    "aboutUs": {
       "title": "About Us",
       "href": "/about-us",
-      "subMenuItems": {
-        "subMenuOne": {
-          "title": "Our Story",
-          "href": "/about-us/our-story",
-          "description": "Who are we and what we stand for?",
-          "icon": "Building2"
-        }
+      "ourStory": {
+        "title": "Our Story",
+        "href": "/about-us/our-story",
+        "description": "Who are we and what we stand for?",
+        "icon": "Building2"
       }
     },
-    "linkFive": {
+    "contact": {
       "title": "Contact",
       "href": "/contact"
     }

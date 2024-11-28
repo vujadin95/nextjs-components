@@ -18,79 +18,69 @@
     "system": "Sistem"
   },
   "navigation": {
-    "linkOne": {
+    "servicesAndProducts": {
       "title": "Usluge & Proizvodi",
       "href": "/services-and-products",
-      "subMenuItems": {
-        "subMenuOne": {
-          "title": "Projektovanje",
-          "href": "/services-and-products/design",
-          "description": "Kompletni licencirani projekti",
-          "icon": "DraftingCompassIcon"
-        },
-        "subMenuTwo": {
-          "title": "Sopstvena Proizvodnja",
-          "href": "/services-and-products/production",
-          "description": "Proizvodja upotrebom kvalitetnih materijala i opreme",
-          "icon": "Cog"
-        },
-        "subMenuThree": {
-          "title": "Sistemi za uštedu",
-          "href": "/services-and-products/savings",
-          "description": "Poboljšanje performansi i ušteda energije",
-          "icon": "Leaf"
-        },
-        "subMenuFour": {
-          "title": "Distribucija proizvoda",
-          "href": "/services-and-products/product-distribution",
-          "description": "Kvalitetna distribucija proizvoda",
-          "icon": "Truck"
-        }
+      "design": {
+        "title": "Projektovanje",
+        "href": "/services-and-products/design",
+        "description": "Kompletni licencirani projekti"
+      },
+      "production": {
+        "title": "Sopstvena Proizvodnja",
+        "href": "/services-and-products/production",
+        "description": "Proizvodja upotrebom kvalitetnih materijala i opreme"
+      },
+      "savings": {
+        "title": "Sistemi za uštedu",
+        "href": "/services-and-products/savings",
+        "description": "Poboljšanje performansi i ušteda energije"
+      },
+      "productDistribution": {
+        "title": "Distribucija proizvoda",
+        "href": "/services-and-products/product-distribution",
+        "description": "Kvalitetna distribucija proizvoda"
       },
       "gridCols": "2"
     },
-    "linkTwo": {
+    "solutions": {
       "title": "Rešenja",
       "href": "/solutions",
-      "subMenuItems": {
-        "subMenuOne": {
-          "title": "Hlađenje",
-          "href": "/solutions/cooling",
-          "description": "Hlađenje",
-          "icon": "Snowflake"
-        },
-        "subMenuTwo": {
-          "title": "Klimatizacija",
-          "href": "/solutions/air-conditioning",
-          "description": "Klimatizacija",
-          "icon": "Fan"
-        },
-        "subMenuThree": {
-          "title": "Sistemi za uštedu",
-          "href": "/solutions/savings",
-          "description": "Poboljšanje performansi i ušteda energije",
-          "icon": "Leaf"
-        }
+      "cooling": {
+        "title": "Hlađenje",
+        "href": "/solutions/cooling",
+        "description": "Hlađenje",
+        "icon": "Snowflake"
+      },
+      "airConditioning": {
+        "title": "Klimatizacija",
+        "href": "/solutions/air-conditioning",
+        "description": "Klimatizacija",
+        "icon": "Fan"
+      },
+      "savings": {
+        "title": "Sistemi za uštedu",
+        "href": "/solutions/savings",
+        "description": "Poboljšanje performansi i ušteda energije",
+        "icon": "Leaf"
       },
       "gridCols": "2"
     },
-    "linkThree": {
+    "whySuperheat": {
       "title": "Zašto Superheat",
       "href": "/why-superheat"
     },
-    "linkFour": {
+    "aboutUs": {
       "title": "O nama",
       "href": "/about-us",
-      "subMenuItems": {
-        "subMenuOne": {
-          "title": "Naša priča",
-          "href": "/about-us/our-story",
-          "description": "Ko smo mi i šta predstavljamo?",
-          "icon": "Building2"
-        }
+      "ourStory": {
+        "title": "Naša priča",
+        "href": "/about-us/our-story",
+        "description": "Ko smo mi i šta predstavljamo?",
+        "icon": "Building2"
       }
     },
-    "linkFive": {
+    "contact": {
       "title": "Kontakt",
       "href": "/contact"
     }

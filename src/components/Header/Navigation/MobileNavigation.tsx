@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import MobileNavItem from "./MobileNavItem";
-import { NavigationTypes } from "./navigation.types";
+import useNavigationData from "./useNavigation";
 
-export default function MobileNavigation({ navigation }: NavigationTypes) {
+export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
   const closeNav = () => setIsOpen(!isOpen)
+  const navigation = useNavigationData();
+
 
   return (
     <div>
