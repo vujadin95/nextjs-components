@@ -12,7 +12,7 @@ export interface MenuTypes {
   title: string;
   href: Pathnames;
   subMenu?: SubMenuItem[];
-  gridCols?: number;
+  gridCols?: number | boolean;
 }
 
 export interface MenuItem {

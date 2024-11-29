@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -58,9 +59,9 @@ export default function Carousel({
   };
 
   return (
-    <div className="relative h-full w-full select-none overflow-hidden rounded-sm">
+    <div className="relative h-full w-full select-none overflow-hidden rounded-md">
       <div
-        className="flex h-full w-full rounded-sm bg-transparent transition-transform duration-500 ease-in-out"
+        className="flex h-full w-full rounded-md bg-transparent transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides.map((slide) => (
@@ -70,33 +71,29 @@ export default function Carousel({
             alt={"some"}
             placeholder="blur"
             loading="lazy"
-            className="aspect-video h-auto w-full shrink-0 rounded-sm object-cover"
+            className="aspect-video h-auto w-full shrink-0 rounded-md object-cover"
           />
         ))}
       </div>
       {/* control arrows */}
       <div className="group absolute inset-0 flex items-center justify-between px-4">
-        <ChevronLeft
-          onClick={prev}
-          size={40}
-          className="hidden cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 group-hover:block"
-        />
-        <ChevronRight
-          size={40}
-          onClick={next}
-          className="hidden cursor-pointer rounded-full bg-black/20 p-2 text-white transition-colors duration-200 hover:bg-black/40 group-hover:block"
-        />
+        <button onClick={prev} className="rounded-full">
+          <ChevronLeft className="h-8 w-8 cursor-pointer rounded-full bg-black/40 p-2 text-white transition-colors duration-200 hover:bg-black/60 group-hover:block lg:hidden lg:h-10 lg:w-10" />
+        </button>
+        <button onClick={next} className="rounded-full">
+          <ChevronRight className="h-8 w-8 cursor-pointer rounded-full bg-black/40 p-2 text-white transition-colors duration-200 hover:bg-black/60 group-hover:block lg:hidden lg:h-10 lg:w-10" />
+        </button>
       </div>
 
       {/* dots */}
-      <div className="absolute bottom-4 left-0 right-0">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transform">
         <div className="flex items-center justify-center gap-2">
           {slides.map((slide, index) => (
-            <div
+            <button
               key={slide.id}
               onClick={() => goToSlide(index)}
               className={cn(
-                "h-2 w-2 cursor-pointer rounded-full bg-black/60 transition-all duration-200",
+                "h-2.5 w-2.5 cursor-pointer rounded-full bg-white/50 transition-all duration-200",
                 curr === index && "scale-150 bg-white",
               )}
             />

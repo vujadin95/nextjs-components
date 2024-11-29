@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { MenuTypes } from "./navigation.types";
 import { Link } from "@/i18n/routing";
 interface MobileNavItemProps {
-  menu: MenuTypes,
-  closeNav: () => void
+  menu: MenuTypes;
+  closeNav: () => void;
 }
 
 const MobileNavItem = ({ menu, closeNav }: MobileNavItemProps) => {
@@ -15,33 +15,37 @@ const MobileNavItem = ({ menu, closeNav }: MobileNavItemProps) => {
   return (
     <li key={menu.title}>
       <span
-        className="flex items-center justify-between p-4 rounded-md cursor-pointer relative hover:bg-hoverBackground"
-        onClick={() => setIsOpen(prev => !prev)}
+        className="relative flex cursor-pointer items-center justify-between rounded-md p-4"
+        onClick={() => setIsOpen((prev) => !prev)}
       >
-        <Link href={menu.href} onClick={closeNav} className={`${!hasSubMenu && 'w-full'}`}>{menu.title}</Link>
+        <Link
+          href={menu.href}
+          onClick={closeNav}
+          className={`${!hasSubMenu && "w-full"}`}
+        >
+          {menu.title}
+        </Link>
         {hasSubMenu && (
-          <ChevronDown
-            className={`ml-auto ${isOpen && "rotate-180"} `}
-          />
+          <ChevronDown className={`ml-auto ${isOpen && "rotate-180"} `} />
         )}
       </span>
       {isOpen && hasSubMenu && (
-        <ul
-          className="ml-5"
-        >
+        <ul className="ml-5">
           {menu.subMenu?.map((subm) => (
             <li
               key={subm.title}
-              className="p-2 flex items-center hover:bg-hoverBackground rounded-md gap-x-2 cursor-pointer"
+              className="flex cursor-pointer items-center gap-x-2 p-2"
             >
-              <subm.icon className="w-8 h-8 p-1 rounded-sm" />
+              <subm.icon className="h-8 w-8 rounded-sm p-1" />
 
-              <Link onClick={closeNav} href={subm.href} className="w-full">{subm.title}</Link>
+              <Link onClick={closeNav} href={subm.href} className="w-full">
+                {subm.title}
+              </Link>
             </li>
           ))}
         </ul>
       )}
     </li>
-  )
-}
-export default MobileNavItem
+  );
+};
+export default MobileNavItem;

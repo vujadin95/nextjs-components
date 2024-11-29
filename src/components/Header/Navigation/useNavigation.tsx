@@ -10,88 +10,59 @@ import {
 } from "lucide-react";
 import { Pathnames } from "@/i18n/routing";
 
-
 const useNavigationData = () => {
-  const t = useTranslations('navigation');
+  const t = useTranslations("navigation");
 
-  const navigation = [
+  const navigationLinks = [
     {
-      title: t("servicesAndProducts.title"),
-      href: t("servicesAndProducts.href") as Pathnames,
+      title: "servicesAndProducts",
       subMenu: [
-        {
-          title: t("servicesAndProducts.design.title"),
-          href: t("servicesAndProducts.design.href") as Pathnames,
-          description: t("servicesAndProducts.design.description"),
-          icon: DraftingCompassIcon,
-        },
-        {
-          title: t("servicesAndProducts.production.title"),
-          href: t("servicesAndProducts.production.href") as Pathnames,
-          description: t("servicesAndProducts.production.description"),
-          icon: Cog,
-        },
-        {
-          title: t("servicesAndProducts.savings.title"),
-          href: t("servicesAndProducts.savings.href") as Pathnames,
-          description: t("servicesAndProducts.savings.description"),
-          icon: Leaf,
-        },
-        {
-          title: t("servicesAndProducts.productDistribution.title"),
-          href: t("servicesAndProducts.productDistribution.href") as Pathnames,
-          description: t("servicesAndProducts.productDistribution.description"),
-          icon: Truck,
-        },
+        { title: "design", icon: DraftingCompassIcon },
+        { title: "production", icon: Cog },
+        { title: "savings", icon: Leaf },
+        { title: "productDistribution", icon: Truck },
       ],
-      gridCols: parseInt(t("servicesAndProducts.gridCols")),
+      gridCols: 2,
     },
     {
-      title: t("solutions.title"),
-      href: t("solutions.href") as Pathnames,
+      title: "solutions",
       subMenu: [
-        {
-          title: t("solutions.cooling.title"),
-          href: t("solutions.cooling.href") as Pathnames,
-          description: t("solutions.cooling.description"),
-          icon: Snowflake
-        },
-        {
-          title: t("solutions.airConditioning.title"),
-          href: t("solutions.airConditioning.href") as Pathnames,
-          description: t("solutions.airConditioning.description"),
-          icon: Fan,
-        },
-        {
-          title: t("solutions.savings.title"),
-          href: t("solutions.savings.href") as Pathnames,
-          description: t("solutions.savings.description"),
-          icon: Leaf,
-        },
+        { title: "cooling", icon: Snowflake },
+        { title: "airConditioning", icon: Fan },
+        { title: "savings", icon: Leaf },
       ],
-      gridCols: parseInt(t("solutions.gridCols")),
+      gridCols: 2,
     },
     {
-      title: t("whySuperheat.title"),
-      href: t("whySuperheat.href") as Pathnames,
+      title: "whySuperheat",
+      subMenu: null,
+      gridCols: false,
     },
     {
-      title: t("aboutUs.title"),
-      href: t("aboutUs.href") as Pathnames,
-      subMenu: [
-        {
-          title: t("aboutUs.ourStory.title"),
-          href: t("aboutUs.ourStory.href") as Pathnames,
-          description: t("aboutUs.ourStory.description"),
-          icon: Building2,
-        },
-      ],
+      title: "aboutUs",
+      subMenu: [{ title: "ourStory", icon: Building2 }],
+      gridCols: 1,
     },
     {
-      title: t("contact.title"),
-      href: t("contact.href") as Pathnames,
+      title: "contact",
+      subMenu: null,
+      gridCols: false,
     },
   ];
-  return navigation
-}
-export default useNavigationData
+  const navigation = navigationLinks.map((link) => ({
+    title: t(`${link.title}.title`),
+    href: t(`${link.title}.href`) as Pathnames,
+    subMenu: link.subMenu
+      ? link.subMenu.map((sublink) => ({
+          title: t(`${link.title}.${sublink.title}.title`),
+          href: t(`${link.title}.${sublink.title}.href`) as Pathnames,
+          description: t(`${link.title}.${sublink.title}.description`),
+          icon: sublink.icon,
+        }))
+      : undefined,
+    gridCols: link.gridCols,
+  }));
+
+  return navigation;
+};
+export default useNavigationData;

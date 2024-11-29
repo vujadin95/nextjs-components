@@ -1,6 +1,6 @@
+"use client";
 import DesktopNavigationItem from "./DesktopNavItem";
 import useNavigationData from "./useNavigation";
-
 
 const DesktopNavigation = () => {
   const navigation = useNavigationData();

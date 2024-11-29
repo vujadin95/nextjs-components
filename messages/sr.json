@@ -40,8 +40,7 @@
         "title": "Distribucija proizvoda",
         "href": "/services-and-products/product-distribution",
         "description": "Kvalitetna distribucija proizvoda"
-      },
-      "gridCols": "2"
+      }
     },
     "solutions": {
       "title": "Rešenja",
@@ -63,8 +62,7 @@
         "href": "/solutions/savings",
         "description": "Poboljšanje performansi i ušteda energije",
         "icon": "Leaf"
-      },
-      "gridCols": "2"
+      }
     },
     "whySuperheat": {
       "title": "Zašto Superheat",

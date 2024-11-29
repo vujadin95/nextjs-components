@@ -1,15 +1,24 @@
+"use client";
 import { ChevronDown } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { MenuItem } from "./navigation.types";
+import { useState } from "react";
 
 const DesktopNavigationItem = ({ menu }: MenuItem) => {
   const hasSubMenu = menu?.subMenu?.length;
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <li className="group/link flex items-center hover:h-full" key={menu.title}>
+    <li
+      className="group/link relative flex items-center rounded-md text-sm duration-200 hover:bg-hoverBackground xl:text-base"
+      key={menu.title}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={() => setIsHovered(false)}
+    >
       <Link
         href={menu.href}
-        className="flex cursor-pointer items-center gap-1 rounded-sm px-3 py-2 font-semibold transition-all group-hover/link:bg-hoverBackground"
+        className="flex cursor-pointer items-center gap-1 px-3 py-2 font-semibold"
       >
         {menu.title}
         {hasSubMenu && (
@@ -19,8 +28,8 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
           />
         )}
       </Link>
-      {hasSubMenu && (
-        <div className="duraiton-500 absolute top-full hidden w-max origin-top rounded-md border border-border bg-background p-4 animate-out fade-out zoom-out-95 group-hover/link:grid group-hover/link:animate-in group-hover/link:zoom-in-90">
+      {hasSubMenu && isHovered && (
+        <div className="group/test absolute top-full hidden w-max rounded-md border border-border bg-background p-4 group-hover/link:grid group-hover/link:duration-200 group-hover/link:animate-in group-hover/link:zoom-in-90">
           <div
             className={`grid gap-4 ${
               menu.gridCols === 3

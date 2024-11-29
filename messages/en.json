@@ -40,8 +40,7 @@
         "title": "Product Distribution",
         "href": "/services-and-products/product-distribution",
         "description": "Quality product distribution"
-      },
-      "gridCols": "2"
+      }
     },
     "solutions": {
       "title": "Solutions",
@@ -63,8 +62,7 @@
         "href": "/solutions/savings",
         "description": "Improving performance and saving energy",
         "icon": "Leaf"
-      },
-      "gridCols": "2"
+      }
     },
     "whySuperheat": {
       "title": "Why Superheat",
