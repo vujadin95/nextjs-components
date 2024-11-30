@@ -1,4 +1,23 @@
 {
+  "Metadata": {
+    "description": "Optimizacija rashladnih sistema, sistema za grejanje i klimatizacije",
+    "keywords": {
+      "site": "superheat",
+      "coolingSystems": "rashladni sistemi",
+      "heatingSystems": "sistemi za grejanje",
+      "airConditioning": "klimatizacija",
+      "savings": "ušteda",
+      "energyConsumption": "potrošnja energije",
+      "design": "projektovanje",
+      "processAutomation": "automatizacija procesa",
+      "PLCAutomation": "PLC upravljanje",
+      "coolingAndFreezing": "hlađenje i zamrzavanje"
+    },
+    "home": "Početna",
+    "aboutUs": "O Nama",
+    "ourStory": "Naša Priča",
+    "contact": "Kontakt"
+  },
   "localeSwitch": {
     "selectLanguageLabel": "Odaberi jezik",
     "english": {

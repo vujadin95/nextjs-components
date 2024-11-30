@@ -8,6 +8,7 @@ export default function Home() {
       <section className="my-5 flex h-[500px] flex-col items-center justify-center overflow-hidden">
         <Brands />
       </section>
+
     </>
   );
 }

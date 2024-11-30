@@ -1,6 +1,7 @@
 import Maintenance from "@/components/Maintenance/Maintenance";
 import { useTranslations } from "next-intl";
 
+
 const ServicesAndProducts = () => {
   const t = useTranslations('servicesAndProducts')
   return (

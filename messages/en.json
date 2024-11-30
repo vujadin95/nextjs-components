@@ -1,4 +1,23 @@
 {
+  "Metadata": {
+    "description": "Optimization of cooling systems, heating and air conditioning systems",
+    "keywords": {
+      "site": "superheat",
+      "coolingSystems": "cooling systems",
+      "heatingSystems": "heating systems",
+      "airConditioning": "air conditioning",
+      "savings": "savings",
+      "energyConsumption": "energy consumption",
+      "design": "design",
+      "processAutomation": "process automation",
+      "PLCAutomation": "PLC automation",
+      "coolingAndFreezing": "cooling and freezing"
+    },
+    "home": "Home",
+    "aboutUs": "About Us",
+    "ourStory": "Our Story",
+    "contact": "Contact"
+  },
   "localeSwitch": {
     "selectLanguageLabel": "Select Language",
     "english": {

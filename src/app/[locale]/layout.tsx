@@ -7,11 +7,64 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/Footer/Footer";
+import { Metadata } from "next";
+import { getTranslations } from 'next-intl/server';
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+const keywords = ["site", "coolingSystems", "heatingSystems", "airConditioning", "savings", "energyConsumption", "design", "processAutomation", "PLCAutomation", "coolingAndFreezing"]
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+  return {
+    title: {
+      default: "Superheat",
+      template: "%s - Superheat"
+    },
+    description: t('description'),
+    keywords: keywords.map((keyword => t(`keywords.${keyword}`))),
+    icons: {
+      icon: [
+        {
+          media: "(prefers-color-scheme: light)",
+          url: "/dark-logo.png",
+          href: "/dark-logo.png",
+        },
+        {
+          media: "(prefers-color-scheme: dark)",
+          url: "/light-logo.png",
+          href: "/light-logo.png",
+        },
+      ]
+    }
+  };
+}
+
+// export const metadata: Metadata = {
+//   title: {
+//     default: "Superheat",
+//     template: "%s - Superheat"
+//   },
+//   keywords: [""],
+//   description: 'Optimize your cooling and heating system',
+//   icons: {
+//     icon: [
+//       {
+//         media: "(prefers-color-scheme: light)",
+//         url: "/dark-logo.png",
+//         href: "/dark-logo.png",
+//       },
+//       {
+//         media: "(prefers-color-scheme: dark)",
+//         url: "/light-logo.png",
+//         href: "/light-logo.png",
+//       },
+//     ]
+//   }
+// }
 
 export default async function RootLayout({
   children,
