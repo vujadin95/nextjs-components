@@ -115,6 +115,26 @@
         "value": "WE OPTIMIZE WORK AND EXTEND THE WORKING LIFE OF YOUR REFRIGERATION EQUIPMENT"
       },
       "stringFour": { "value": "WE WILL MAKE YOUR BUSINESS MORE EFFICIENT" }
+    },
+    "herosection": {
+      "whoIsSuperheat": "What is Superheat?",
+      "title": "Optimization of heating, cooling and air conditioning processes",
+      "subtitle": "We are innovators who strive to continuously improve your systems and solutions.",
+      "button": "Contact us",
+      "cards": {
+        "completeservice": {
+          "title": "Complete Service",
+          "description": "We provide a complete service, from design to commissioning. We realize standard and specially adapted projects."
+        },
+        "significantsavings": {
+          "title": "Significant Savings",
+          "description": "Our energy saving systems can reduce your electricity bills by 35% and up to 40% in the operating time of the equipment for the same performance."
+        },
+        "automationprocess": {
+          "title": "Automation Process",
+          "description": "We have professional experts in the field of developing our own software, SCADA monitoring and remote monitoring of our systems."
+        }
+      }
     }
   },
   "servicesAndProducts": {

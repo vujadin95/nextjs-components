@@ -15,7 +15,7 @@ const MobileNavItem = ({ menu, closeNav }: MobileNavItemProps) => {
   return (
     <li key={menu.title}>
       <span
-        className="relative flex cursor-pointer items-center justify-between rounded-md p-4"
+        className="relative flex cursor-pointer items-center justify-between rounded-md py-4"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <Link

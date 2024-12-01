@@ -113,6 +113,26 @@
         "value": "OPTIMIZUJEMO RAD I PRODUŽAVAMO RADNI VEK VAŠE RASHLADNE OPREME"
       },
       "stringFour": { "value": "UČINIĆEMO VAŠ BIZNIS EFIKASNIJIM" }
+    },
+    "herosection": {
+      "whoIsSuperheat": "Šta je Superheat?",
+      "title": "Optimizacija procesa grejanja, hlađenja i klimatizacije",
+      "subtitle": "Mi smo inovatori koji nastoje neprekidno da poboljšaju vaše sisteme i rešenja.",
+      "button": "Kontaktirajte nas",
+      "cards": {
+        "completeservice": {
+          "title": "Kompletna Usluga",
+          "description": "Pružamo kompletnu uslugu, od projektovanja do puštanja u rad. Realizujemo standardne i posebno prilagođene projekte."
+        },
+        "significantsavings": {
+          "title": "Značajne Uštede",
+          "description": " Naši sistemi za uštedu mogu umanjiti Vaše račune za struju za 35% i do 40% u vremenu rada opreme za isti učinak."
+        },
+        "automationprocess": {
+          "title": "Proces automatizacije",
+          "description": "Imamo stručne eksperte u oblasti razvoja sopstvenih softvera, SCADA monitoringa i daljinskog nadzora naših sistema."
+        }
+      }
     }
   },
   "servicesAndProducts": {

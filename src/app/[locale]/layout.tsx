@@ -43,29 +43,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: "Superheat",
-//     template: "%s - Superheat"
-//   },
-//   keywords: [""],
-//   description: 'Optimize your cooling and heating system',
-//   icons: {
-//     icon: [
-//       {
-//         media: "(prefers-color-scheme: light)",
-//         url: "/dark-logo.png",
-//         href: "/dark-logo.png",
-//       },
-//       {
-//         media: "(prefers-color-scheme: dark)",
-//         url: "/light-logo.png",
-//         href: "/light-logo.png",
-//       },
-//     ]
-//   }
-// }
-
 export default async function RootLayout({
   children,
   params: { locale },
@@ -82,7 +59,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.className} relative bg-background antialiased`}
+      <body className={`${inter.className} relative antialiased `}
       >
         <ThemeProvider
           attribute="class"
@@ -92,7 +69,7 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
 
-            <div className="fixed top-0 z-50 h-[60px] w-full border-b border-border bg-background shadow-[s0px_20px_20px_0px_#00000024]">
+            <div className="fixed top-0 z-50 h-[60px] w-full border-b border-border shadow-[s0px_20px_20px_0px_#00000024]">
               <Header />
             </div>
             <main className="mx-auto max-w-screen-2xl px-4 pt-[60px]">

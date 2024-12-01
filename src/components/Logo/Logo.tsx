@@ -8,7 +8,7 @@ const Logo = () => {
     <Link className="relative select-none flex items-center phone:w-36 sm:w-fit" href={"/"}>
       <Image
         src={logoBlack}
-        alt="Superheat Logo for light theme"
+        alt="Superheat logo for light theme"
         width={250}
         height={60}
         className="dark:hidden w-auto object-contain"

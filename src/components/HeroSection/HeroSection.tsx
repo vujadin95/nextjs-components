@@ -9,6 +9,7 @@ import img9 from "../../../public/hero-slider-images/9.jpg";
 import img10 from "../../../public/hero-slider-images/10.jpg";
 import img11 from "../../../public/hero-slider-images/11.jpg";
 import BackgroundShape from "./BackgroundShape";
+import Cards from "./Cards";
 
 const slidesImage = [
   { src: img3, id: 1 },
@@ -23,17 +24,20 @@ const slidesImage = [
 
 const HeroSection = () => {
   return (
-    <section className="relative mt-5 flex h-[calc(100vh_-_100px)] flex-col items-center justify-center gap-10 lg:flex-row">
-      <BackgroundShape />
-
-      <div className="w-full max-w-[450px] lg:w-2/5">
-        <HeroText />
-      </div>
-
-      <div className="h-[400px] w-full rounded-md lg:h-[600px]">
-        <Carousel slides={slidesImage} />
-      </div>
-    </section>
+    <>
+      <section className="relative mt-5 pt-8 lg:pt-12">
+        <BackgroundShape />
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
+          <div className="w-full shrink-0 lg:w-2/5 lg:max-w-[400px]">
+            <HeroText />
+          </div>
+          <div className="h-[400px] w-full rounded-md shadow-xl md:h-[500px] lg:h-[600px]">
+            <Carousel slides={slidesImage} />
+          </div>
+        </div>
+        <Cards />
+      </section>
+    </>
   );
 };
 export default HeroSection;
