@@ -13,6 +13,9 @@
       "PLCAutomation": "PLC upravljanje",
       "coolingAndFreezing": "hlađenje i zamrzavanje"
     },
+    "ogimages": {
+      "ogimage": "/open-graph-image-sr.png"
+    },
     "home": "Početna",
     "aboutUs": "O Nama",
     "ourStory": "Naša Priča",
@@ -187,5 +190,11 @@
     "heading": "Stranca u izradi!",
     "subheading": "Bicemo uskoro tu.",
     "contactuslabel": "Možete nas kontaktirati na:"
+  },
+  "notfound": {
+    "heading": "Ne možemo naći stranicu koju tražite.",
+    "descriptionone": "Vratite se na ",
+    "link": "početnu",
+    "descriptiontwo": " stranu."
   }
 }

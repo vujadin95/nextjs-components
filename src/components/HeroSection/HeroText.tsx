@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 const HeroText = () => {
   const t = useTranslations("HomePage.herosection");
   return (
-    <div className="w-full max-w-[450px] shrink-0 justify-between space-y-3">
+    <div className="w-full max-w-[450px] shrink-0 space-y-3">
       <p className="text-xs text-muted-foreground lg:text-sm">
         {t("whoIsSuperheat")}
       </p>
@@ -14,8 +14,10 @@ const HeroText = () => {
       </h2>
       <p className="text-base md:text-lg">{t("subtitle")}</p>
 
-      <Button asChild className="text-base font-semibold lg:text-lg">
-        <Link href={"/contact"}>{t("button")}</Link>
+      <Button asChild className="h-12 text-base font-semibold lg:text-lg">
+        <Link className="" href={"/contact"}>
+          {t("button")}
+        </Link>
       </Button>
     </div>
   );

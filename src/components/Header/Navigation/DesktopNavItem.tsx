@@ -3,10 +3,13 @@ import { ChevronDown } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { MenuItem } from "./navigation.types";
 import { useState } from "react";
+import { usePathname } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 
 const DesktopNavigationItem = ({ menu }: MenuItem) => {
   const hasSubMenu = menu?.subMenu?.length;
   const [isHovered, setIsHovered] = useState(false);
+  const pathName = usePathname();
 
   return (
     <li
@@ -18,7 +21,12 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
     >
       <Link
         href={menu.href}
-        className="flex cursor-pointer items-center gap-1 px-3 py-2 font-semibold"
+        className={cn(
+          pathName === menu.href || pathName.startsWith(`${menu.href}`)
+            ? "text-blue-500"
+            : "",
+          "flex cursor-pointer items-center gap-1 px-3 py-2 font-semibold",
+        )}
       >
         {menu.title}
         {hasSubMenu && (
@@ -29,14 +37,15 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
         )}
       </Link>
       {hasSubMenu && isHovered && (
-        <div className="group/test absolute top-full hidden w-max rounded-md border border-border p-4 group-hover/link:grid group-hover/link:duration-200 bg-background group-hover/link:animate-in group-hover/link:zoom-in-90">
+        <div className="group/test absolute top-full hidden w-max rounded-md border border-border bg-background p-4 group-hover/link:grid group-hover/link:duration-200 group-hover/link:animate-in group-hover/link:zoom-in-90">
           <div
-            className={`grid gap-4 ${menu.gridCols === 3
-              ? "grid-cols-3"
-              : menu.gridCols === 2
-                ? "grid-cols-2"
-                : "grid-cols-1"
-              }`}
+            className={`grid gap-4 ${
+              menu.gridCols === 3
+                ? "grid-cols-3"
+                : menu.gridCols === 2
+                  ? "grid-cols-2"
+                  : "grid-cols-1"
+            }`}
           >
             {hasSubMenu &&
               menu.subMenu?.map((submenu, i) => (
@@ -52,7 +61,14 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
                       {submenu.icon && <submenu.icon />}
                     </div>
                     <div>
-                      <h6 className="font-semibold">{submenu.title}</h6>
+                      <h6
+                        className={cn(
+                          pathName === submenu.href ? "text-blue-500" : "",
+                          "font-semibold",
+                        )}
+                      >
+                        {submenu.title}
+                      </h6>
                       <p className="max-w-[150px] text-sm">
                         {submenu.description}
                       </p>

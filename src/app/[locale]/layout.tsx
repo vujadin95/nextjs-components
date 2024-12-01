@@ -8,24 +8,39 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Footer from "@/components/Footer/Footer";
 import { Metadata } from "next";
-import { getTranslations } from 'next-intl/server';
+import { getTranslations } from "next-intl/server";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
 
-const keywords = ["site", "coolingSystems", "heatingSystems", "airConditioning", "savings", "energyConsumption", "design", "processAutomation", "PLCAutomation", "coolingAndFreezing"]
+const keywords = [
+  "site",
+  "coolingSystems",
+  "heatingSystems",
+  "airConditioning",
+  "savings",
+  "energyConsumption",
+  "design",
+  "processAutomation",
+  "PLCAutomation",
+  "coolingAndFreezing",
+];
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale, namespace: 'Metadata' });
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
   return {
     title: {
       default: "Superheat",
-      template: "%s - Superheat"
+      template: "%s - Superheat",
     },
-    description: t('description'),
-    keywords: keywords.map((keyword => t(`keywords.${keyword}`))),
+    description: t("description"),
+    keywords: keywords.map((keyword) => t(`keywords.${keyword}`)),
     icons: {
       icon: [
         {
@@ -38,8 +53,23 @@ export async function generateMetadata({ params: { locale } }: { params: { local
           url: "/light-logo.png",
           href: "/light-logo.png",
         },
-      ]
-    }
+      ],
+    },
+    openGraph: {
+      title: "Superheat",
+      description: t("description"),
+      url: "https://superheat-v02.vercel.app",
+      siteName: "Supeheat",
+      images: [
+        {
+          url: t("ogimages.ogimage"),
+          width: 1200,
+          height: 600,
+        },
+      ],
+      locale: locale,
+      type: "website",
+    },
   };
 }
 
@@ -50,7 +80,6 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -59,8 +88,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.className} relative antialiased `}
-      >
+      <body className={`${inter.className} relative antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -68,7 +96,6 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-
             <div className="fixed top-0 z-50 h-[60px] w-full border-b border-border shadow-[s0px_20px_20px_0px_#00000024]">
               <Header />
             </div>
@@ -78,7 +105,6 @@ export default async function RootLayout({
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>
-
       </body>
     </html>
   );

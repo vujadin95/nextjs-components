@@ -5,7 +5,7 @@ const Cards = () => {
   const t = useTranslations("HomePage.herosection.cards");
   return (
     <div className="relative mt-8 grid md:grid-cols-3">
-      <div className="flex flex-col gap-y-6 px-2 py-4 md:p-4 lg:p-6 lg:py-6 lg:transition-transform lg:hover:scale-105">
+      <div className="flex flex-col gap-y-6 px-2 py-4 md:p-4 lg:p-6 lg:py-6">
         <Timer />
         <div>
           <h3 className="font-medium lg:text-lg">
@@ -16,7 +16,7 @@ const Cards = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-y-6 px-2 py-4 md:p-4 lg:p-6 lg:py-6 lg:transition-transform lg:hover:scale-105">
+      <div className="flex flex-col gap-y-6 px-2 py-4 md:p-4 lg:p-6 lg:py-6">
         <DollarSign />
         <div>
           <h3 className="font-medium lg:text-lg">
@@ -27,7 +27,7 @@ const Cards = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-y-6 px-2 py-4 md:p-4 lg:p-6 lg:py-6 lg:transition-transform lg:hover:scale-105">
+      <div className="flex flex-col gap-y-6 px-2 py-4 md:p-4 lg:p-6 lg:py-6">
         <Cpu />
         <div>
           <h3 className="font-medium lg:text-lg">

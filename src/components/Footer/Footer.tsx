@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border bg-background text-textColor">
+    <footer className="border-t">
       <div className="mx-auto flex w-full max-w-screen-2xl flex-col gap-4 p-4 py-8 xl:flex-row">
         {/* logo */}
         <div className="xl:max-w-[320px]">
@@ -22,16 +22,14 @@ const Footer = () => {
 
         <div className="grid w-full gap-4 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2">
           {/* company details */}
-          <div className="">
-            <p className="mb-3 bg-gradient-to-l from-neutral-900 to-red-700 bg-clip-text text-xl font-bold text-transparent dark:bg-gradient-to-l dark:from-slate-50 dark:to-red-700 dark:bg-clip-text dark:text-transparent">
-              SUPERHEAT DOO KRAGUJEVAC
-            </p>
+          <div className="self-end pb-4">
+            {/* <p className="mb-3 text-xl font-medium">SUPERHEAT DOO KRAGUJEVAC</p> */}
             <a
               target="_blank"
               href="https://maps.app.goo.gl/JdeLYm4q4Yn5GR6b7"
-              className="flex items-center gap-2 rounded-sm transition-colors hover:bg-hoverBackground"
+              className="flex items-center gap-2 rounded-sm transition-colors hover:text-destructive"
             >
-              <MapPin className="shrink-0 text-textHover" />
+              <MapPin className="shrink-0" />
               <div className="mb-2">
                 <p>{t("headquarters")}: Kragujevac</p>
                 <p>34000 Vojislava Ilića 14</p>
@@ -41,9 +39,9 @@ const Footer = () => {
             <a
               target="_blank"
               href="https://maps.app.goo.gl/CNVqufLnF4SX5vx4A"
-              className="flex items-center gap-2 rounded-sm transition-colors hover:bg-hoverBackground"
+              className="flex items-center gap-2 rounded-sm transition-colors"
             >
-              <MapPin className="shrink-0 text-textHover" />
+              <MapPin className="shrink-0" />
               <div>
                 <p>{t("manufacturing&warehouse")}: Kruševac</p>
                 <p>37000 Srnje bb</p>
@@ -56,7 +54,7 @@ const Footer = () => {
             <p className="font-semibold">{t("officialEmail")}:</p>
             <a
               href="mailto:info@superheat.rs"
-              className="mb-2 flex items-center gap-1 rounded-sm py-1 transition-colors hover:bg-hoverBackground"
+              className="hover:bg-hoverBackground mb-2 flex items-center gap-1 rounded-sm py-1 transition-colors"
             >
               <Mail size={20} className="text-textHover" />
               info@superheat.rs
@@ -65,14 +63,14 @@ const Footer = () => {
             <p className="font-semibold">{t("commercialService")}:</p>
             <a
               href="mailto:m.popovic@superheat.rs"
-              className="flex items-center gap-1 rounded-sm py-1 transition-colors hover:bg-hoverBackground"
+              className="hover:bg-hoverBackground flex items-center gap-1 rounded-sm py-1 transition-colors"
             >
               <Mail size={20} className="text-textHover" />
               m.popovic@superheat.rs
             </a>
             <a
               href="tel:+381652007778"
-              className="flex items-center gap-1 rounded-sm py-1 transition-colors hover:bg-hoverBackground"
+              className="hover:bg-hoverBackground flex items-center gap-1 rounded-sm py-1 transition-colors"
             >
               <Phone size={20} className="text-textHover" />
               065/200 77 78
@@ -84,7 +82,7 @@ const Footer = () => {
             <p className="font-semibold">{t("finance")}:</p>
             <a
               href="mailto:finance@superheat.rs"
-              className="mb-2 flex items-center gap-1 rounded-sm py-1 transition-colors hover:bg-hoverBackground"
+              className="hover:bg-hoverBackground mb-2 flex items-center gap-1 rounded-sm py-1 transition-colors"
             >
               <Mail size={20} className="text-textHover" />
               finance@superheat.rs
@@ -93,14 +91,14 @@ const Footer = () => {
             <p className="font-semibold">{t("technicalDepartment")}:</p>
             <a
               href="mailto:n.milojevic@superheat.rs"
-              className="flex items-center gap-1 rounded-sm py-1 transition-colors hover:bg-hoverBackground"
+              className="hover:bg-hoverBackground flex items-center gap-1 rounded-sm py-1 transition-colors"
             >
               <Mail size={20} className="text-textHover" />
               n.milojevic@superheat.rs
             </a>
             <a
               href="tel:+381649255454"
-              className="flex items-center gap-1 rounded-sm py-1 transition-colors hover:bg-hoverBackground"
+              className="hover:bg-hoverBackground flex items-center gap-1 rounded-sm py-1 transition-colors"
             >
               <Phone size={20} className="text-textHover" />
               064/925 54 54
@@ -110,7 +108,7 @@ const Footer = () => {
           {/* services */}
           <div>
             <Link
-              className="text-md font-semibold leading-6 transition-colors hover:text-textHover"
+              className="text-md hover:text-textHover font-semibold leading-6 transition-colors"
               href={navigation[0].href}
             >
               {navigation[0].title}
@@ -119,7 +117,7 @@ const Footer = () => {
               {navigation[0]?.subMenu?.map((subMenuItem) => (
                 <li
                   key={subMenuItem.title}
-                  className="rounded-sm transition-colors hover:bg-hoverBackground"
+                  className="hover:bg-hoverBackground rounded-sm transition-colors"
                 >
                   <Link
                     className="inline-block w-full p-1"
@@ -135,7 +133,7 @@ const Footer = () => {
           {/* solutins */}
           <div>
             <Link
-              className="text-md font-semibold leading-6 transition-colors hover:text-textHover"
+              className="text-md hover:text-textHover font-semibold leading-6 transition-colors"
               href={navigation[1].href}
             >
               {navigation[1].title}
@@ -144,7 +142,7 @@ const Footer = () => {
               {navigation[1]?.subMenu?.map((subMenuItem) => (
                 <li
                   key={subMenuItem.title}
-                  className="rounded-sm transition-colors hover:bg-hoverBackground"
+                  className="hover:bg-hoverBackground rounded-sm transition-colors"
                 >
                   <Link
                     className="inline-block w-full p-1"
@@ -160,19 +158,19 @@ const Footer = () => {
           {/* about us */}
           <div className="flex flex-col space-y-3">
             <Link
-              className="text-md p-1 font-semibold leading-6 transition-colors hover:text-textHover"
+              className="text-md hover:text-textHover p-1 font-semibold leading-6 transition-colors"
               href={navigation[2].href}
             >
               {navigation[2].title}
             </Link>
             <Link
-              className="text-md mt-3 p-1 font-semibold leading-6 transition-colors hover:text-textHover"
+              className="text-md hover:text-textHover mt-3 p-1 font-semibold leading-6 transition-colors"
               href={navigation[3].href}
             >
               {navigation[3].title}
             </Link>
             <Link
-              className="text-md p-1 font-semibold leading-6 transition-colors hover:text-textHover"
+              className="text-md hover:text-textHover p-1 font-semibold leading-6 transition-colors"
               href={navigation[4].href}
             >
               {navigation[4].title}

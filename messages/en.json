@@ -13,6 +13,9 @@
       "PLCAutomation": "PLC automation",
       "coolingAndFreezing": "cooling and freezing"
     },
+    "ogimages": {
+      "ogimage": "/open-graph-image-en.png"
+    },
     "home": "Home",
     "aboutUs": "About Us",
     "ourStory": "Our Story",
@@ -189,5 +192,11 @@
     "heading": "Website under maintenance!",
     "subheading": "We'll be back soon.",
     "contactuslabel": "You can contact us:"
+  },
+  "notfound": {
+    "heading": "We cannot find the page you are looking for.",
+    "descriptionone": "Go back to ",
+    "link": "home",
+    "descriptiontwo": " page."
   }
 }
