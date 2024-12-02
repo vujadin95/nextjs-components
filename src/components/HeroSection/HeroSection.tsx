@@ -1,13 +1,13 @@
 import Carousel from "../Carousel/Carousel";
 import HeroText from "./HeroText";
-import img3 from "../../../public/hero-slider-images/3.jpeg";
-import img4 from "../../../public/hero-slider-images/4.jpeg";
-import img6 from "../../../public/hero-slider-images/6.jpeg";
-import img7 from "../../../public/hero-slider-images/7.jpeg";
-import img8 from "../../../public/hero-slider-images/8.jpeg";
-import img9 from "../../../public/hero-slider-images/9.jpeg";
-import img10 from "../../../public/hero-slider-images/10.jpeg";
-import img11 from "../../../public/hero-slider-images/11.jpeg";
+import img3 from "../../../public/hero-slider-images/3.jpg";
+import img4 from "../../../public/hero-slider-images/4.jpg";
+import img6 from "../../../public/hero-slider-images/6.jpg";
+import img7 from "../../../public/hero-slider-images/7.jpg";
+import img8 from "../../../public/hero-slider-images/8.jpg";
+import img9 from "../../../public/hero-slider-images/9.jpg";
+import img10 from "../../../public/hero-slider-images/10.jpg";
+import img11 from "../../../public/hero-slider-images/11.jpg";
 import BackgroundShape from "./BackgroundShape";
 import Cards from "./Cards";
 
@@ -31,7 +31,7 @@ const HeroSection = () => {
           <div className="w-full shrink-0 lg:w-2/5 lg:max-w-[400px]">
             <HeroText />
           </div>
-          <div className="h-[400px] w-full rounded-md shadow-xl md:h-[500px] lg:h-[600px]">
+          <div className="h-[400px] w-full rounded-md shadow-xl md:h-[500px] xl:h-[600px]">
             <Carousel slides={slidesImage} />
           </div>
         </div>

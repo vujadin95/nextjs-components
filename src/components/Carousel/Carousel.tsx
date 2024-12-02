@@ -65,14 +65,16 @@ export default function Carousel({
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {slides.map((slide) => (
-          <Image
-            key={slide.id}
-            src={slide.src}
-            alt={`hero image number ${slide.id}`}
-            placeholder="blur"
-            loading="lazy"
-            className="h-full w-full shrink-0 rounded-md object-cover"
-          />
+          <div key={slide.id} className="relative h-full w-full shrink-0">
+            <Image
+              src={slide.src}
+              alt={`hero image number ${slide.id}`}
+              placeholder="blur"
+              priority
+              sizes="(max-width: 1064px) 100vw, 1064px"
+              className="h-full rounded-md object-cover"
+            />
+          </div>
         ))}
       </div>
       {/* control arrows */}
