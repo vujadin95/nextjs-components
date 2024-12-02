@@ -1,19 +1,25 @@
-import Header from "@/components/Header/Header";
-import "./globals.css";
+import "../globals.css";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "./providers";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import {
+  setRequestLocale,
+  getTranslations,
+  getMessages,
+} from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { ThemeProvider } from "./providers";
+import { NextIntlClientProvider } from "next-intl";
+import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 const keywords = [
   "site",
@@ -44,11 +50,13 @@ export async function generateMetadata({
     icons: {
       icon: [
         {
+          type: "image/png",
           media: "(prefers-color-scheme: light)",
           url: "/dark-logo.png",
           href: "/dark-logo.png",
         },
         {
+          type: "image/png",
           media: "(prefers-color-scheme: dark)",
           url: "/light-logo.png",
           href: "/light-logo.png",
@@ -83,6 +91,7 @@ export default async function RootLayout({
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 

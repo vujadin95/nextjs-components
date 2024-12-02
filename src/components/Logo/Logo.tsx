@@ -5,20 +5,16 @@ import logoLight from "../../../public/logo/superheat-white.png";
 
 const Logo = () => {
   return (
-    <Link className="relative select-none flex items-center phone:w-36 sm:w-fit" href={"/"}>
+    <Link className="w-full max-w-[250px]" href={"/"}>
       <Image
         src={logoBlack}
         alt="Superheat logo for light theme"
-        width={250}
-        height={60}
-        className="dark:hidden w-auto object-contain"
+        className="h-auto w-full object-contain dark:hidden"
       />
       <Image
         src={logoLight}
         alt="Superheat Logo for dark theme"
-        width={250}
-        height={60}
-        className="hidden dark:block w-auto object-contain"
+        className="hidden h-auto w-full object-contain dark:block"
       />
     </Link>
   );

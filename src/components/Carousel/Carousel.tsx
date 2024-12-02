@@ -68,19 +68,23 @@ export default function Carousel({
           <Image
             key={slide.id}
             src={slide.src}
-            alt={"some"}
+            alt={`hero image number ${slide.id}`}
             placeholder="blur"
             loading="lazy"
-            className="aspect-video h-auto w-full shrink-0 rounded-md object-cover"
+            className="h-full w-full shrink-0 rounded-md object-cover"
           />
         ))}
       </div>
       {/* control arrows */}
       <div className="group absolute inset-0 flex items-center justify-between px-4">
-        <button onClick={prev} className="rounded-full">
+        <button
+          aria-label="previous image"
+          onClick={prev}
+          className="rounded-full"
+        >
           <ChevronLeft className="h-8 w-8 cursor-pointer rounded-full bg-black/40 p-2 text-white transition-colors duration-200 hover:bg-black/60 group-hover:block lg:hidden lg:h-10 lg:w-10" />
         </button>
-        <button onClick={next} className="rounded-full">
+        <button aria-label="next image" onClick={next} className="rounded-full">
           <ChevronRight className="h-8 w-8 cursor-pointer rounded-full bg-black/40 p-2 text-white transition-colors duration-200 hover:bg-black/60 group-hover:block lg:hidden lg:h-10 lg:w-10" />
         </button>
       </div>
@@ -90,6 +94,7 @@ export default function Carousel({
         <div className="flex items-center justify-center gap-2">
           {slides.map((slide, index) => (
             <button
+              aria-label="choose image from slides"
               key={slide.id}
               onClick={() => goToSlide(index)}
               className={cn(
