@@ -48,7 +48,7 @@ export default function LocaleSwitch() {
         <Button
           disabled={isPending}
           variant="outline"
-          className="group ml-auto flex w-[132px] items-center gap-2 rounded-sm focus-visible:ring-0 focus-visible:ring-offset-0"
+          className="group ml-auto flex h-9 w-[110px] items-center gap-1 rounded-sm px-2 focus-visible:ring-0 focus-visible:ring-offset-0 sm:h-10"
         >
           <Globe className="h-4 w-4" />
           {locale === "en" ? "English" : "Srpski"}

@@ -138,6 +138,10 @@
           "description": "We have professional experts in the field of developing our own software, SCADA monitoring and remote monitoring of our systems."
         }
       }
+    },
+    "brands": {
+      "heading": "Our Partners",
+      "subheading": "We're working with the best!"
     }
   },
   "servicesAndProducts": {

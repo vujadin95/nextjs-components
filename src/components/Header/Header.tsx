@@ -7,16 +7,17 @@ import LocaleSwitch from "../LocaleSwitcher/LocaleSwitch";
 const Header = () => {
   return (
     <header className="mx-auto flex h-full w-full max-w-screen-2xl items-center justify-between gap-2 bg-background px-4">
-      <Logo />
+      <div className="w-full max-w-[250px]">
+        <Logo />
+      </div>
       <DesktopNavigation />
 
-      <div className="ml-auto flex shrink-0 items-center gap-2 lg:ml-0">
+      <div className="flex shrink-0 items-center gap-1 md:gap-2">
         <ThemeSwitch />
         <LocaleSwitch />
-      </div>
-
-      <div className="lg:hidden">
-        <MobileNavigation />
+        <div className="lg:hidden">
+          <MobileNavigation />
+        </div>
       </div>
     </header>
   );

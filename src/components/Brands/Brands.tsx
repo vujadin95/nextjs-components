@@ -1,17 +1,19 @@
+import { useTranslations } from "next-intl";
 import Brand from "./Brand";
 import { brandsCollecton } from "./brandsCollection";
 
 const Brands = () => {
+  const t = useTranslations("HomePage.brands");
   return (
     <>
-      <div className="mb-6 text-center">
-        <h2 className="mb-2 text-3xl font-medium uppercase lg:text-5xl">
-          Our partners
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-medium lg:text-5xl">
+          {t("heading")}
         </h2>
-        <p className="m-4 text-2xl">We are working only with the best</p>
+        <h3 className="m-4 text-2xl">{t("subheading")}</h3>
       </div>
       <div className="slide-mask group flex w-full select-none gap-5 overflow-hidden">
-        <div className="animate-slide-left flex items-center justify-between gap-5 group-hover:paused">
+        <div className="flex animate-slide-left items-center justify-between gap-5 group-hover:paused">
           {brandsCollecton.map((brand) => (
             <Brand
               key={brand.id}
@@ -22,10 +24,7 @@ const Brands = () => {
             />
           ))}
         </div>
-        <div
-          className="animate-slide-left flex items-center gap-5 group-hover:paused"
-          aria-hidden="true"
-        >
+        <div className="flex animate-slide-left items-center gap-5 group-hover:paused">
           {brandsCollecton.map((brand) => (
             <Brand
               key={brand.id}

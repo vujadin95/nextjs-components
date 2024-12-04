@@ -33,7 +33,7 @@ export default function MobileNavigation() {
       </button>
 
       {isOpen && (
-        <div className="text-textColor fixed left-0 right-0 top-[60px] h-full select-none overflow-y-auto bg-background p-4 pb-20">
+        <div className="text-textColor fixed left-0 right-0 top-[59px] h-full select-none overflow-y-auto bg-background p-4 pb-20">
           <ul>
             {navigation.map((menu) => {
               return (

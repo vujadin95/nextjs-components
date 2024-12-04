@@ -37,7 +37,7 @@ const DesktopNavigationItem = ({ menu }: MenuItem) => {
         )}
       </Link>
       {hasSubMenu && isHovered && (
-        <div className="group/test absolute top-full hidden w-max rounded-md border border-border bg-background p-4 group-hover/link:grid group-hover/link:duration-200 group-hover/link:animate-in group-hover/link:zoom-in-90">
+        <div className="group/test absolute top-full hidden w-max rounded-md border border-border bg-background p-4 shadow-md group-hover/link:grid group-hover/link:duration-200 group-hover/link:animate-in group-hover/link:zoom-in-90">
           <div
             className={`grid gap-4 ${
               menu.gridCols === 3

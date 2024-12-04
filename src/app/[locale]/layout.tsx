@@ -1,5 +1,5 @@
 import "../globals.css";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import {
   setRequestLocale,
   getTranslations,
@@ -12,9 +12,9 @@ import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  display: "swap",
+  weight: ["100", "200", "400", "500", "600", "700", "800"],
 });
 
 export function generateStaticParams() {
@@ -97,7 +97,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.className} relative antialiased`}>
+      <head>
+        <link rel="icon" href="data:,"></link>
+      </head>
+      <body className={`${poppins.className} relative antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -105,12 +108,10 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <div className="fixed top-0 z-50 h-[60px] w-full border-b border-border shadow-[s0px_20px_20px_0px_#00000024]">
+            <div className="sticky top-0 z-50 w-full border-b bg-background py-1 shadow-lg">
               <Header />
             </div>
-            <main className="mx-auto max-w-screen-2xl px-4 pt-[60px]">
-              {children}
-            </main>
+            <main className="mx-auto max-w-screen-2xl px-4">{children}</main>
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>

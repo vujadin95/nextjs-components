@@ -13,18 +13,18 @@ const Brand = ({ path, brandName, img, bgColor }: BrandType) => {
       href={path}
       target="_blank"
       className={cn(
-        "shrink-0 rounded-md border border-border shadow-xl",
+        "shrink-0 rounded-md shadow-xl",
         bgColor,
         bgColor && "text-black",
       )}
     >
-      <div className="relative flex h-28 w-48 items-center justify-center">
+      <div className="relative flex h-20 w-40 items-center justify-center md:h-28 md:w-48">
         <Image
           src={img}
           alt={brandName}
           fill
-          sizes="(max-width: 140px) 100vw"
-          className="object-scale-down"
+          sizes="(max-width: 192px) 192px"
+          className="w-full object-scale-down"
         />
       </div>
     </a>

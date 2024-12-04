@@ -37,7 +37,7 @@ const MobileNavItem = ({ menu, closeNav }: MobileNavItemProps) => {
         )}
       </span>
       {isOpen && hasSubMenu && (
-        <ul className="ml-5">
+        <ul className="ml-3">
           {menu.subMenu?.map((subm) => (
             <li
               key={subm.title}
