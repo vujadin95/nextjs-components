@@ -80,6 +80,7 @@
     /* --background: 0 0% 3.9%;
     --foreground: 0 0% 98%; */
     --card: 0 0% 3.9%;
+    /* --card: 0 0% 3.9%; */
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -92,7 +93,8 @@
     --accent: 240 3.7% 15.9%;
     /* --accent: 0 0% 14.9%; */
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 72.2% 50.6%;
+    /* --destructive: 0 62.8% 30.6%; */
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
