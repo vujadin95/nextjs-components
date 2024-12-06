@@ -12,7 +12,7 @@ const Brands = () => {
         </h2>
         <h3 className="m-4 text-2xl">{t("subheading")}</h3>
       </div>
-      <div className="slide-mask group flex w-full select-none gap-5 overflow-hidden">
+      <div className="slide-mask group flex h-[200px] w-full select-none gap-5 overflow-hidden md:h-[300px]">
         <div className="flex animate-slide-left items-center justify-between gap-5 group-hover:paused">
           {brandsCollecton.map((brand) => (
             <Brand

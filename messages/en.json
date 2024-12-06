@@ -181,7 +181,28 @@
     }
   },
   "contact": {
-    "pagetitle": "Contact"
+    "pagetitle": "Contact",
+    "errormessages": {
+      "name": "First name is required.",
+      "namelength": "Your name is too long.",
+      "lastname": "Last name is required.",
+      "lastnamelength": "Your last name is too long.",
+      "email": "Invalid email address.",
+      "message": "Describe us your request.",
+      "messagelength": "Give us short version, and we will contact you for more details."
+    },
+    "contactform": {
+      "contactus": "Contact Us",
+      "subheading": "Fill out the form below and we'll get back to you as soon as possible.",
+      "name": "Name",
+      "nameplaceholder": "Your first name",
+      "lastname": "Last Name",
+      "lastnameplaceholder": "Your last name",
+      "emailplaceholder": "Your email",
+      "message": "Message",
+      "messageplaceholder": "Type in your message here",
+      "submit": "Submit"
+    }
   },
   "footer": {
     "slogan": "Using new technologies and properly sized equipment, we are making your business more efficient.",

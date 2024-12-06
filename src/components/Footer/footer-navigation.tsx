@@ -10,7 +10,7 @@ const FooterNavigation = () => {
       <FooterLogo />
       <div className="space-y-3">
         <Link
-          className="text-base font-semibold underline-offset-4 hover:underline"
+          className="text-base font-semibold underline-offset-4 hover:text-muted-foreground hover:underline"
           href={navigation[0].href}
         >
           {navigation[0].title}
@@ -19,7 +19,7 @@ const FooterNavigation = () => {
           {navigation[0]?.subMenu?.map((subMenuItem) => (
             <li key={subMenuItem.title}>
               <Link
-                className="underline-offset-4 hover:underline"
+                className="text-muted-foreground hover:underline hover:underline-offset-4"
                 href={subMenuItem.href}
               >
                 {subMenuItem.title}
@@ -41,7 +41,7 @@ const FooterNavigation = () => {
           {navigation[1]?.subMenu?.map((subMenuItem) => (
             <li key={subMenuItem.title}>
               <Link
-                className="underline-offset-4 hover:underline"
+                className="text-muted-foreground underline-offset-4 hover:underline"
                 href={subMenuItem.href}
               >
                 {subMenuItem.title}
@@ -54,19 +54,19 @@ const FooterNavigation = () => {
       {/* about us */}
       <div className="flex flex-col space-y-3">
         <Link
-          className="font-semibold underline-offset-4 hover:underline"
+          className="font-semibold underline-offset-4 hover:text-muted-foreground hover:underline"
           href={navigation[2].href}
         >
           {navigation[2].title}
         </Link>
         <Link
-          className="font-semibold underline-offset-4 hover:underline"
+          className="font-semibold underline-offset-4 hover:text-muted-foreground hover:underline"
           href={navigation[3].href}
         >
           {navigation[3].title}
         </Link>
         <Link
-          className="font-semibold underline-offset-4 hover:underline"
+          className="font-semibold underline-offset-4 hover:text-muted-foreground hover:underline"
           href={navigation[4].href}
         >
           {navigation[4].title}

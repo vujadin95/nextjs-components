@@ -179,7 +179,28 @@
     }
   },
   "contact": {
-    "pagetitle": "Kontakt"
+    "pagetitle": "Kontakt",
+    "errormessages": {
+      "name": "Ime je obavezno.",
+      "namelength": "Ime je predugačko.",
+      "lastname": "Prezime je obavezno.",
+      "lastnamelength": "Prezime je predugačko.",
+      "email": "Nevažeća email adresa.",
+      "message": "Opišite nam Vaš zahtev.",
+      "messagelength": "Opišite ukratko, a mi ćemo vas kontaktirati za sve detalje."
+    },
+    "contactform": {
+      "contactus": "Kontaktirajte nas",
+      "subheading": "Popunite formu ispod i javićemo se ubrzo.",
+      "name": "Ime",
+      "nameplaceholder": "Vaše ime",
+      "lastname": "Prezime",
+      "lastnameplaceholder": "Vaše prezime",
+      "emailplaceholder": "Vaš email",
+      "message": "Poruka",
+      "messageplaceholder": "Recite nam Vaš zahtev",
+      "submit": "Pošalji"
+    }
   },
   "footer": {
     "slogan": "Koristeći nove tehnologije i pravilno dimenzionisanu opremu, činimo vaše poslovanje efikasnijim.",

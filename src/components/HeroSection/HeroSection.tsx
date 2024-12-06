@@ -10,6 +10,7 @@ import img10 from "../../../public/hero-slider-images/10.jpg";
 import img11 from "../../../public/hero-slider-images/11.jpg";
 import BackgroundShape from "./BackgroundShape";
 import Cards from "./Cards";
+import { CarouselDemo } from "../Carousel/carouse-demo";
 
 const slidesImage = [
   { src: img3, id: 1 },
@@ -33,6 +34,7 @@ const HeroSection = () => {
           </div>
           <div className="h-[400px] w-full rounded-md shadow-xl md:h-[500px] xl:h-[600px]">
             <Carousel slides={slidesImage} />
+            {/* <CarouselDemo /> */}
           </div>
         </div>
         <Cards />
