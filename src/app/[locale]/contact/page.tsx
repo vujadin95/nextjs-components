@@ -18,8 +18,8 @@ export async function generateMetadata({
 const Contact = () => {
   const t = useTranslations("contact");
   return (
-    <div className="min-h-[calc(100vh_-_59px)]">
-      <h1 className="my-5 w-full text-center text-4xl">{t("pagetitle")}</h1>
+    <div className="min-h-[calc(100vh_-_59px)] pt-20">
+      {/* <h1 className="my-5 w-full text-center text-4xl">{t("pagetitle")}</h1> */}
       {/* <Maintenance /> */}
       <ContactForm />
     </div>

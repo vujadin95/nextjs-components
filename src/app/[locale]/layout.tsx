@@ -11,6 +11,7 @@ import { ThemeProvider } from "./providers";
 import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -83,11 +84,12 @@ export async function generateMetadata({
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  const { locale } = params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -112,6 +114,7 @@ export default async function RootLayout({
               <Header />
             </div>
             <main className="mx-auto max-w-screen-2xl px-4">{children}</main>
+            <Toaster />
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>

@@ -187,7 +187,11 @@
       "lastnamelength": "Prezime je predugačko.",
       "email": "Nevažeća email adresa.",
       "message": "Opišite nam Vaš zahtev.",
-      "messagelength": "Opišite ukratko, a mi ćemo vas kontaktirati za sve detalje."
+      "messagelength": "Opišite ukratko, a mi ćemo vas kontaktirati za sve detalje.",
+      "ifsuccesstrue": "Vaša poruka je poslata.",
+      "ifsuccessfalse": "Nevažeći kontakt podaci.",
+      "invalidContactForm": " Molimo Vas pokušajte sa važećim podacima.",
+      "validContactForm": "Hvala Vam, uskoro ćemo Vas kontaktirati."
     },
     "contactform": {
       "contactus": "Kontaktirajte nas",
@@ -199,7 +203,8 @@
       "emailplaceholder": "Vaš email",
       "message": "Poruka",
       "messageplaceholder": "Recite nam Vaš zahtev",
-      "submit": "Pošalji"
+      "submit": "Pošalji",
+      "home": "Početna"
     }
   },
   "footer": {

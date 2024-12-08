@@ -1,18 +1,28 @@
-import { z } from "zod";
-import { formSchema } from "@/lib/schemas";
+import { ContactFormValues } from "@/shemas/contactFormSchema";
 interface EmailTemplateProps {
-  firstName: string;
-  emailFormData: z.infer<typeof formSchema>;
+  data: ContactFormValues;
 }
 
 export const EmailTemplate: React.FC<EmailTemplateProps> = ({
-  firstName,
-  emailFormData,
-}) => (
-  <div>
-    <h1>Welcome, {firstName}!</h1>
-    <p>{emailFormData.lastName}</p>
-    <p>{emailFormData.email}</p>
-    <p>{emailFormData.message}</p>
+  data,
+}: EmailTemplateProps) => (
+  <div className="text-black">
+    <h1>
+      Imate novu poruku sa vebsajta od:{" "}
+      <span className="font-semibold">{data.firstName}</span>
+    </h1>
+    <p>
+      Ime: <span className="font-semibold">{data.firstName}</span>
+    </p>
+    <p>
+      Prezime: <span className="font-semibold">{data.lastName}</span>
+    </p>
+    <p>
+      Email: <span className="font-semibold underline">{data.email}</span>
+    </p>
+    <p>
+      <span className="font-semibold">Poruka: </span>
+      {data.message}
+    </p>
   </div>
 );
