@@ -55,7 +55,7 @@ export default function LocaleSwitch() {
           <ChevronDown className="h-4 w-4 transition-transform duration-150 group-data-[state=open]:rotate-180" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48 bg-background">
+      <DropdownMenuContent align="end" className="w-40 bg-background sm:w-48">
         <DropdownMenuLabel className="font-medium">
           {t("selectLanguageLabel")}
         </DropdownMenuLabel>

@@ -77,7 +77,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="mx-auto max-w-xl shadow-xl">
+    <Card className="w-full shadow-xl lg:w-1/2">
       <CardHeader>
         <CardTitle>{contactTranslation("contactus")}</CardTitle>
         <CardDescription className="pt-2">
@@ -91,7 +91,7 @@ export default function ContactForm() {
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-6"
           >
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 min-[550px]:grid-cols-2">
               <FormField
                 control={form.control}
                 name="firstName"
@@ -151,7 +151,7 @@ export default function ContactForm() {
                     <Textarea
                       id="message"
                       placeholder={contactTranslation("messageplaceholder")}
-                      className="min-h-[120px]"
+                      className="min-h-[120px] sm:min-h-[180px]"
                       {...field}
                     />
                   </FormControl>

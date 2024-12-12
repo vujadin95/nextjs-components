@@ -14,10 +14,13 @@ const Socials = ({ description, email, phone }: SocialsProps) => {
       {email && (
         <a
           href={`mailto:${email}`}
-          className="group/email flex items-center gap-1 py-1 underline-offset-4 hover:underline"
+          className="group/email flex items-center gap-1 py-1 decoration-muted-foreground hover:underline hover:underline-offset-4"
         >
-          <Mail size={20} className="group-hover/email:text-blue-500" />
-          <span>{email}</span>
+          <Mail
+            size={20}
+            className="transition-colors group-hover/email:text-blue-500"
+          />
+          <span className="text-muted-foreground">{email}</span>
         </a>
       )}
       {phone && (
@@ -25,8 +28,11 @@ const Socials = ({ description, email, phone }: SocialsProps) => {
           href={`tel:+381${phoneFiltered}`}
           className="group/phone flex items-center gap-1 rounded-sm py-1 underline-offset-4 hover:underline"
         >
-          <Phone size={20} className="group-hover/phone:text-blue-500" />
-          <span>{phone}</span>
+          <Phone
+            size={20}
+            className="transition-colors group-hover/phone:text-blue-500"
+          />
+          <span className="text-muted-foreground">{phone}</span>
         </a>
       )}
     </div>
