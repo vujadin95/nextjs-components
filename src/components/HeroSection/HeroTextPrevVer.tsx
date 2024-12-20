@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/routing";
 
-import TextCarousel from "../Carousel/TextCarousel";
+import TextCarousel from "../Carousel/text-carousel";
 const slidesText = [
   {
     text: "Pružamo kompletnu uslugu, od projektovanja do puštanja u rad.",

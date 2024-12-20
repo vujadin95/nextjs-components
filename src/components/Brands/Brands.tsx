@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import Brand from "./Brand";
+import Brand from "./partner-details";
 import { brandsCollecton } from "./brandsCollection";
 
 const Brands = () => {
